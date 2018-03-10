@@ -1,0 +1,491 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+.top-contact {
+	display:none;
+}
+.contact-btn1 {
+	font-size: 13px;
+}
+.top-btn-cont {
+	width: 100%;
+	margin-left: 0px;
+	float: right;
+	margin-top: 3px;
+	text-align: center;
+}
+.bs-slider > .carousel-inner > .item > img, .bs-slider > .carousel-inner > .item > a > img {
+	height: 150px !important;
+}
+.slide-text {
+	top: 7% !important;
+}
+header {
+	height: 164px;
+	position:relative;
+}
+.main-menu {
+	background: #ffffff;
+}
+#cssmenu #head-mobile {
+	padding: 15px;
+	font-size: 14px;
+}
+.slider-cont {
+	margin-top: 0px;
+}
+.heading1 h2 {
+	font-size: 34px;
+}
+.heading1 span {
+	font-size: 18px;
+}
+.testimonials-cont {
+	width: 100%;
+	float: left;
+	padding: 25px 0px;
+	background: url(../images/testimonials-bg.png) center 0px no-repeat;
+	background-size: 100% 100%;
+}
+.home-contact-form {
+	margin-bottom:30px;
+}
+.footer-cont {
+	font-size: 16px;
+}
+.step {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 19px;
+}
+.step img {
+	width:70%;
+}
+.testimonials-cont .item {
+	font-size: 20px;
+	line-height: 22px;
+}
+.contact-form-cont {
+	padding: 15px;
+}
+.contact-form-heading h5 {
+	font-size: 28px;
+}
+.home-faq-cont h5 {
+	font-size: 32px;
+}
+.smk_accordion .accordion_in .acc_head {
+	font-size: 20px;
+	font-weight:400;
+}
+.home-part1, .homepage-gallery-cont {
+	padding: 25px 0px;
+}
+.heading2 {
+	margin-top: 50px;
+}
+#testimonials-carousel-inner .item {
+	padding:25px;
+}
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 22px;
+	padding: 15px 0px;
+	line-height: 24px;
+}
+.book-btn {
+	font-size: 34px;
+}
+.sub-heading1 h2 {
+	font-size: 34px;
+}
+
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.general-painting-service1
+{
+	margin-bottom:30px;
+}
+
+.inner-page-heading h1 {
+	font-size: 28px;
+}
+
+.inner-page-heading {
+	padding: 25px 0px;
+}
+
+
+.general-painting1 {
+	padding: 30px 0px;
+}
+
+.inner-tab-cont {
+	height:auto;
+	margin-bottom: 40px;
+}
+
+.inner-tab-cont ul li a {
+	font-size: 20px;
+	padding: 5px 20px;
+}
+
+
+.inner-tab-cont span
+{
+	display:none;
+}
+
+
+.inner-tab-cont ul li {
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	padding: 0px 10px 8px 10px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
+
+.gp-feature1 img
+{
+	width:100px;
+}
+
+
+
+.pc1
+{
+	display:none;
+}
+
+.pc2
+{
+	display:block;
+}
+
+
+}
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+.top-contact {
+	display:none;
+}
+.logo {
+	text-align:center;
+}
+.logo img {
+	width:50%;
+}
+.contact-btn1 {
+	font-size: 14px;
+}
+.top-btn-cont {
+	width: 100%;
+	margin-left: 0px;
+	float: right;
+	margin-top: 3px;
+	text-align: center;
+}
+.bs-slider > .carousel-inner > .item > img, .bs-slider > .carousel-inner > .item > a > img {
+	height: 240px !important;
+}
+.slide-text {
+	top: 7% !important;
+}
+header {
+	height: 155px;
+	position:relative;
+}
+.testimonials-cont .item {
+	font-size: 20px;
+	line-height: 22px;
+}
+.main-menu {
+	background: #ffffff;
+}
+#cssmenu #head-mobile {
+	padding: 15px;
+	font-size: 14px;
+}
+.slider-cont {
+	margin-top:0px;
+}
+.heading1 h2 {
+	font-size: 40px;
+}
+.testimonials-cont {
+	width: 100%;
+	float: left;
+	padding: 25px 0px;
+	background: url(../images/testimonials-bg.png) center 0px no-repeat;
+	background-size: 100% 100%;
+}
+.home-contact-form {
+	margin-bottom:30px;
+}
+.footer-cont {
+	font-size: 16px;
+}
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 22px;
+	padding: 15px 0px;
+	line-height: 24px;
+}
+.book-btn {
+	font-size: 34px;
+}
+.sub-heading1 h2 {
+	font-size: 34px;
+}
+
+
+
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.general-painting-service1
+{
+	margin-bottom:30px;
+}
+
+.inner-page-heading h1 {
+	font-size: 42px;
+}
+
+.general-painting1 {
+	padding: 50px 0px;
+}
+
+.inner-tab-cont {
+	height: 33px;
+	margin-bottom: 40px;
+}
+
+.inner-tab-cont ul li a {
+	font-size: 20px;
+	padding: 2px 20px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 23px;
+	line-height: 23px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+.top-contact {
+	font-size: 15px;
+	width: 115px;
+	padding-right: 7px;
+}
+.contact-btn1 {
+	font-size: 15px;
+}
+.top-btn-cont {
+	margin-left: 7px;
+}
+.bs-slider > .carousel-inner > .item > img, .bs-slider > .carousel-inner > .item > a > img {
+	height: 340px !important;
+}
+.slide-text {
+	top: 7% !important;
+}
+header {
+	height: 115px;
+}
+.main-menu {
+	background: #ffffff;
+}
+#cssmenu #head-mobile {
+	padding: 15px;
+	font-size: 14px;
+}
+.slider-cont {
+	margin-top: 115px;
+}
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 18px;
+	padding: 15px 0px;
+	line-height: 20px;
+}
+.book-btn {
+	font-size: 28px;
+}
+.sub-heading1 h2 {
+	font-size: 40px;
+}
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.inner-tab-cont ul li a {
+	padding: 0px 25px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 23px;
+	line-height: 23px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.bs-slider > .carousel-inner > .item > img, .bs-slider > .carousel-inner > .item > a > img {
+	height: 375px !important;
+}
+.slide-text {
+	top: 4% !important;
+}
+.slider-cont {
+	margin-top: 124px;
+}
+.home-faq-cont h5 {
+	font-size: 37px;
+}
+.contact-form-heading h5 {
+	font-size: 32px;
+}
+.footer-cont {
+	font-size: 17px;
+}
+.pricing-deatils-color1 span {
+	font-size: 47px;
+}
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 25px 0px 25px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 32px;
+	line-height: 34px;
+
+}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+...
+}
