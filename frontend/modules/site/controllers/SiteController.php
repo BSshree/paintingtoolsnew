@@ -97,12 +97,13 @@ class SiteController extends Controller
               $to1=  $data['to1'];
               $username=  $data['na1'];
               $email=  $data['em1'];
+              $phone=  $data['ph1'];
               if($data['form'] == 'royal'){
                     $mail_sub1 = 'Painting Tool-Royale-Play Calculation ' ;
                     $mail_body1 = "<p>Hi Admin,</p>";
                     $mail_body1 .= "A new rough estimation by a customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$username."<br>Email: ".$email." <br><br> Design: ".$de1."<br>";
-                    $mail_body1 .=  "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br>Total: ".$to1."<br><br>";
+                    $mail_body1 .=  "Name: ".$username."<br>Email: ".$email." <br><br> Design: ".$de1."<br>Phone: ".$phone."<br>";
+                    $mail_body1 .=  "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br><b>Total: ".$to1."</b><br><br>";
                     $mail_body1 .= "<strong>Regards, </strong><br>";
                     $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
 
@@ -110,7 +111,7 @@ class SiteController extends Controller
                     $mail_body2 = "<p>Hi ".$username.",</p>";
                     $mail_body2 .= "Here you find the calculation for your requested design.<br>Thank you. <br><br>";
                     $mail_body2 .= "Design: ".$de1."<br>";
-                    $mail_body2 .= "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br>Total: ".$to1."<br><br>";
+                    $mail_body2 .= "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br><b>Total: ".$to1."</b><br><br>";
                     $mail_body2 .= "<strong>Regards, </strong><br>";
                     $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
 
@@ -156,9 +157,9 @@ class SiteController extends Controller
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();  
-          //  print_r($data); exit;
-            $room_name= array();
+//            echo'<pre>'; print_r($data); exit;
             $plan_name= array();
+            $room_name= array();
             $others = array();
             foreach($data['data'] as $value){
                  if(strpos($value['name'], 'room-name') !== false ){
@@ -184,31 +185,30 @@ class SiteController extends Controller
                     $mail_sub1 = 'Painting Tool Home-Makeover Calculation ' ;
                     $mail_body1 = "<p>Hi Admin,</p>";
                     $mail_body1 .= "A new rough estimation by a customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$others['name']."<br>Email: ".$others['email']." <br>";
-                    $mail_body1 .=  "Total: ".$others['total-price']." <br>";
-                    $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+                    $mail_body1 .=  "Name: ".$others['name']."<br>Email: ".$others['email']." <br>Phone: ".$others['phone']."<br>";
+                    $mail_body1 .=  "<b>Total: ".$others['home-total']." </b><br>";
                     $mail_body1 .= "<table cellpadding='10' cellspacing='10'>";
                     $mail_body1 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
                     for($i = "0"; $i < count($room_name); $i++){
                         $mail_body1 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
                     }
-                    $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td>".$others['total-price']." </td></tr>";
+                    $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>".$others['home-total']." </b></td></tr>";
                     $mail_body1 .= "</table>";
-                    
+                    $mail_body1 .= "<strong>Regards, </strong><br>";
+                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
                     
                     $mail_sub2 = 'REQUEST FOR CALCULATION';
                     $mail_body2 = "<p>Hi ".$others['name'].",</p>";
                     $mail_body2 .= "Here you find the calculation for your requested plan.<br>Thank you. <br><br>";
-                    $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
-                    $mail_body2 .= "<table>";
+                    $mail_body2 .= "<table cellpadding='10' cellspacing='10'>";
                     $mail_body2 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
                     for($i = "0"; $i < count($room_name); $i++){
                         $mail_body2 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
                     }
-                    $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td>".$others['total-price']." </td></tr>";
+                    $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>".$others['home-total']."</b></td></tr>";
                     $mail_body2 .= "</table>";
+                    $mail_body2 .= "<strong>Regards, </strong><br>";
+                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
                     
                      $emailSend1 = Yii::$app->mailer->compose()
                             ->setFrom(['sumanasdev@gmail.com'])
@@ -245,16 +245,80 @@ class SiteController extends Controller
     public function actionMailmegeneral(){
      
         if (Yii::$app->request->isAjax) {
-            echo 'test'; exit;
             $data = Yii::$app->request->post();  
+            echo '<pre>'; print_r($data); exit;
+            $plan_name= array();
+            $rooms_name= array();
+            $others = array();
             
+             foreach($data['data'] as $value){
+                 if(strpos($value['name'], 'room-name') !== false ){
+                       $room_name[] = $value['value'];
+                 }else if(strpos($value['name'], 'plan-name') !== false ){
+                     $plan_name[] = $value['value'];
+                 }else{
+                     $others[$value['name']] = $value['value'];
+                 }
+                 
+            }
+            $price = ["Hatchling Plan" => "3000", "Baby Plan" => "6000", "Transformation Plan"=>"10000"];
+
+            $mail_body = '';
+            for($i = "0"; $i < count($room_name); $i++){
+                $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$plan_name[$i]." </td><th> Rate: </th><td> ".$price[$plan_name[$i]]." </td>";
+            }
+           
+              if($data['form'] == 'general'){
+                    $mail_sub1 = 'Painting Tool Home-Makeover Calculation ' ;
+                    $mail_body1 = "<p>Hi Admin,</p>";
+                    $mail_body1 .= "A new rough estimation by a customer. <br><br>";
+                    $mail_body1 .=  "Name: ".$others['name']."<br>Email: ".$others['email']." <br>Phone: ".$others['phone']."<br>";
+                    $mail_body1 .=  "<b>Total: ".$others['home-total']." </b><br>";
+                    $mail_body1 .= "<table cellpadding='10' cellspacing='10'>";
+                    $mail_body1 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
+                    for($i = "0"; $i < count($room_name); $i++){
+                        $mail_body1 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
+                    }
+                    $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td>".$others['home-total']." </b></td></tr>";
+                    $mail_body1 .= "</table>";
+                     $mail_body1 .= "<strong>Regards, </strong><br>";
+                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+                    
+                    $mail_sub2 = 'REQUEST FOR CALCULATION';
+                    $mail_body2 = "<p>Hi ".$others['name'].",</p>";
+                    $mail_body2 .= "Here you find the calculation for your requested plan.<br>Thank you. <br><br>";
+                    $mail_body2 .= "<table cellpadding='10' cellspacing='10'>";
+                    $mail_body2 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
+                    for($i = "0"; $i < count($room_name); $i++){
+                        $mail_body2 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
+                    }
+                    $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</td><td>".$others['home-total']."</b></td></tr>";
+                    $mail_body2 .= "</table>";
+                    $mail_body2 .= "<strong>Regards, </strong><br>";
+                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+                    
+                     $emailSend1 = Yii::$app->mailer->compose()
+                            ->setFrom(['sumanasdev@gmail.com'])
+                            ->setTo('banushree@arkinfotec.com')
+                            ->setSubject($mail_sub1)
+                            ->setHtmlBody($mail_body1)
+                            ->send();
+                   $emailSend2 = Yii::$app->mailer->compose()
+                            ->setFrom(['sumanasdev@gmail.com'])
+                            ->setTo($others['email'])
+                            ->setSubject($mail_sub2)
+                            ->setHtmlBody($mail_body2)
+                            ->send();
+
+                    if ($emailSend1 && $emailSend2) {
+                        echo "success"; exit;
+                    } else {
+                            echo "error";exit;
+                    }
+              }
             
             
       }
-        
-        
-        
-        
         
         return $this->renderAjax('/pages/general-painting-calculator', [
                     'model' => $model,
@@ -358,11 +422,7 @@ class SiteController extends Controller
                     }
                   
         }
-//        elseif (Yii::$app->request->isAjax) {
-//            return $this->renderAjax('bookotp', [
-//                        'model' => $model
-//            ]);
-//        }
+
         return $this->renderAjax('bookotp', [
                     'model' => $model,
                     'session_otp' => $session_otp,

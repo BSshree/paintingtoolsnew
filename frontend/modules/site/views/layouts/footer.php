@@ -60,7 +60,7 @@ use yii\widgets\ActiveForm;
     </div>
   </div>
   <div class="footer-row2">
-    <div class="container"> Copyright  © 2018 walldressup.com.  All Rights Reserved . </div>
+    <div class="container"> Copyright  © 2018 walldressup.com.  All Rights Reserved . Developed by Sumanas Technologies | Website development company in India.</div>
     <input type='hidden' name='slug-name' id='slug-id'>
   </div>
 </footer>
@@ -150,6 +150,9 @@ $script = <<< JS
             }
         if( last_part=='home-makeover-calculator'){
         last_part ="Home makeover";
+            }
+        if( last_part=='general-painting-calculator'){
+        last_part ="General painting";
             }
         //alert(last_part);
         var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);

@@ -134,13 +134,13 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div>
                             </div>
-                            <div class="" id="mailme-show-royal" style="display:none">
+<!--                            <div class="" id="mailme-show-royal" style="display:none">
                                 <div class="form-group ">
                                     <div class="row mb-4">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <label>  Full Name  </label>
                                             <input name="name" type="text" class="form-control" id="name">
-                                            <!--<div class="form-control disabledbutton" id="met"></div>-->
+                                            <div class="form-control disabledbutton" id="met"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -149,36 +149,84 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <label>  Email Address  </label>
                                             <input name="email" type="email" class="form-control" id="email">
-                                            <!--<div class="form-control disabledbutton" id="met"></div>-->
+                                            <div class="form-control disabledbutton" id="met"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group ">
+                                <div class="form-group">
                                     <div class="row mb-4">
                                         <div class="col-3">
                                             <input type="submit" name="submit" class="button btn btn1" id="final-mailme-home" value="Send">
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="form-group ">
+                                 <div class="form-group mailme-show" style="display:none">
                                     <div class="row mb-4">
                                         <div class="col-3">
                                          <div id="successMessage"> </div>
-                                         <div class="loading-image"> </div>
+                                         <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div style="display:none" class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""></div>
+                            </div>-->
+                            <div class="modal fade bd-example-modal-lg pricingcalc2" id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog  modal-sm modal-dialog-centered" role="document">
+                                        <div class="modal-content2">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Mail me</h5>
+                                                <button type="button" class="close" data-dismiss="modal"   aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">
+                                                    <div class="form-group">
+                                                        <label class="control-label1">Full Name</label>
+                                                        <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
+                                                        <div class="errorMessage"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label1">Email address</label>
+                                                        <input  type="text" id="email" name="email"  class="form-control" placeholder="Enter Your Email Address" />
+                                                        <div class="errorMessage"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label1">Phone</label>
+                                                        <input  type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
+                                                        <div class="errorMessage"></div>
+                                                    </div>
+                                                    <div class="form-group center-block ">
+                                                        <div class="row mb-4">
+                                                            <div class="col-3 ">
+                                                                <input type="submit" name="submit" class="button btn btn1 " id="final-mailme-home1" value="Send">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mailme-show" style="display:none">
+                                                        <div class="row mb-4">
+                                                            <div class="col-3">
+                                                                <div class="form-group" id="successMessage"> </div>
+                                                                <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
                             <div class="form-group ">
                                 <div class="row mb-4">
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right total1">
                                         Total :  <span class="badge badge-secondary" id="total-amount"></span>
+                                     <input type="hidden" class="royal-total" name="royal-total" id="total-price" value="0">
                                     </div>
                                 </div></div>
                             <div class="modal-footer text-center">
                                  <button type="button" class="btn btn2"data-toggle="modal" data-target="#Bookanotp">Book An Appointment</button>
-                                 <button type="button" class="btn btn1" id="mailme-royal">Mail me</button>
+                                 <!--<button type="button" class="btn btn1" id="mailme-royal">Mail me</button>-->
+                              <button type="button" class="btn btn1" id="mailme-royal" data-toggle="modal" data-target="#mailmepopup">Mail me</button>
+
                             </div>
                         </form>
                     </div>
@@ -287,6 +335,10 @@ $script = <<< JS
                 'name': {
                 required: true,
 		},
+               'phone': {
+                required: true,
+                number: true,
+		},
                 'royal-design':{
                     required:true,
                 },
@@ -310,6 +362,9 @@ $script = <<< JS
                  'royal-design': {
 		required :"Please Select Design",
 		},
+                'phone': {
+                    required :"Please Enter Your Number",
+                    },
                 'radio':{
                     required:"Please Select Option"
                 },
@@ -337,21 +392,22 @@ $script = <<< JS
                 var r1 = $('#met').val();
                 var n1 = $('#name').val();
                 var e1 = $('#email').val();
+                var p1 = $('#phone').val();
             
-            $(".loading-image").show();   
+             $(".mailme-show").show();   
                 
             $.ajax({
        
                 type: 'POST',
                 url: '{$mailme}',
                 data:{
-                    he1:h1, we1:w1, to1:t1, de1:d1, ra1:r1,na1:n1 ,em1:e1,
+                    he1:h1, we1:w1, to1:t1, de1:d1, ra1:r1,na1:n1 ,em1:e1,ph1:p1,
                     form: 'royal',
                      },
                 success: function(data) {
                 if(data == 'success'){
                  $("#successMessage").html( 'Your request has been send sucessfully!!' );
-                 $("#successMessage").fadeOut(3000);
+//                 $("#successMessage").fadeOut(3000);
                 $('#royalplay-validate')[0].reset(); 
                  $(".loading-image").hide(); 
                 $('#radio-met').prop('checked', false);

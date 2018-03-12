@@ -1163,6 +1163,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:40px;
 	font-family: 'Poppins', sans-serif;
 }
+.pricingcalc2 .modal-header {
+	background:#87c533;
+	color:#ffffff;
+	font-size:40px;
+	font-family: 'Poppins', sans-serif;
+}
 .pricingcalcroyalplay {
 	background:#0594d2;
 	color:#ffffff;

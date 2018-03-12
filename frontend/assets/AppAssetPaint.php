@@ -40,7 +40,7 @@ class AppAssetPaint extends AssetBundle {
        //  'js/main.js',
     ];
     public $depends = [
-//        'yii\web\YiiAsset',
+        'yii\web\YiiAsset',
 //        'yii\bootstrap\BootstrapAsset',
     ];
 
