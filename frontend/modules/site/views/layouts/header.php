@@ -73,23 +73,21 @@ use yii\bootstrap\Modal;
 </div>
 <?php
 
-//$script = <<< JS
-//        
-//        $(document).ready(function () {
-//        
-//         
-//        
-//        $('#slug-id).val();
-//         var url = $(location).attr("href"),
-//            parts = url.split("/"),
-//            last_part = parts[parts.length-1];
-//            alert(last_part);
-//    var res_str = last_part.replace(/-/g, ' ');    
-//        alert(res_str);
-//        alert('aket');
-//   
-//   
-//   });
-//JS;
-//$this->registerJs($script, View::POS_END);
+$script = <<< JS
+        
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 10) {
+	    $(".header-row2").css("background" , "#D3D3D3");
+	  }
+
+	  else{
+		  $(".header-row2").css("background" , "white");  	
+	  }
+  })
+})
+        
+JS;
+$this->registerJs($script, View::POS_END);
 ?>

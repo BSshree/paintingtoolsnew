@@ -137,8 +137,8 @@ $script = <<< JS
                 
         var otp_no = $("#otp_no").val();
         
-        $(".show-item-hidden").show(); 
-        $(".item-default-load").hide();
+//        $(".show-item-hidden").show(); 
+//        $(".item-default-load").hide();
         var url = $(location).attr("href"),
             parts = url.split("/"),
             last_part = parts[parts.length-1];
@@ -154,6 +154,11 @@ $script = <<< JS
         if( last_part=='general-painting-calculator'){
         last_part ="General painting";
             }
+//         $("#book1").click(function(){  
+//        alert('bol');
+//        last_part ="Gift a wall";
+//            });
+
         //alert(last_part);
         var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);
         //alert(cap);

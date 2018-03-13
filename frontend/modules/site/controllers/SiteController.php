@@ -247,15 +247,16 @@ class SiteController extends Controller
         if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();  
             echo '<pre>'; print_r($data); exit;
-            $plan_name= array();
-            $rooms_name= array();
+            $appr_sqft = array();
+            $paint = array();
+            $room_name = array();
             $others = array();
             
              foreach($data['data'] as $value){
                  if(strpos($value['name'], 'room-name') !== false ){
                        $room_name[] = $value['value'];
-                 }else if(strpos($value['name'], 'plan-name') !== false ){
-                     $plan_name[] = $value['value'];
+                 }else if(strpos($value['name'], 'appr-sqft') !== false ){
+                     $paint[] = $value['value'];
                  }else{
                      $others[$value['name']] = $value['value'];
                  }
@@ -265,7 +266,7 @@ class SiteController extends Controller
 
             $mail_body = '';
             for($i = "0"; $i < count($room_name); $i++){
-                $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$plan_name[$i]." </td><th> Rate: </th><td> ".$price[$plan_name[$i]]." </td>";
+                $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$paint[$i]." </td><th> Rate: </th><td> ".$price[$paint[$i]]." </td>";
             }
            
               if($data['form'] == 'general'){
@@ -281,7 +282,7 @@ class SiteController extends Controller
                     }
                     $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td>".$others['home-total']." </b></td></tr>";
                     $mail_body1 .= "</table>";
-                     $mail_body1 .= "<strong>Regards, </strong><br>";
+                    $mail_body1 .= "<strong>Regards, </strong><br>";
                     $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
                     
                     $mail_sub2 = 'REQUEST FOR CALCULATION';

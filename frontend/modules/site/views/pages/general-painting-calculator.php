@@ -67,14 +67,14 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                                                 <label class="custom-control-label" for="customRadio1"></label>-->
                                                                                 <input type="radio" name="radio1[0]" class="rad-paint" value="fresh" data-val="0">
 
-                                                                                <label class="custom-control-label" for="customRadio1" ></label>
+                                                                                <!--<label class="custom-control-label" for="customRadio1" ></label>-->
                                                                             </div></td>
                                                                         <td><div class="custom-control custom-radio">
                                                                                 <input type="radio" name="radio1[0]" class="rad-paint" value="repaint" data-val="0">
                                                                                 <!--<input type="radio" name="customRadio" class="custom-control-input customRadio2">-->
-                                                                                <label class="custom-control-label" id="r1" for="customRadio2"></label>
+                                                                                <!--<label class="custom-control-label" id="r1" for="customRadio2"></label>-->
                                                                             </div></td>
-                                                                        <td><input name="room-name1" type="text" class="form-control int-room-name"></td>
+                                                                        <td><input name="room-name1[0]" type="text" class="form-control int-room-name"></td>
                                                                         <td><input name="appr-sqft1[0]" type="text" class="form-control int-appr-sqft"></td>
                                                                         <td class="paintclass">
                                                                         </td>
@@ -118,15 +118,15 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                                         <td scope="row" align="center"> <div class="custom-control custom-radio">
                                                                                 <!--<input type="radio"  name="customRadio" class="custom-control-input rad3">-->
                                                                                 <input type="radio"  name="radio2[0]" class="ex-paint" value="ex_fresh" data-val="0">
-                                                                                <label class="custom-control-label" for="customRadio3"></label>
+                                                                                <!--<label class="custom-control-label" for="customRadio3"></label>-->
                                                                             </div></td>
                                                                         <td><div class="custom-control custom-radio">
                                                                                 <!--<input type="radio"  name="customRadio" class="custom-control-input rad4">-->
                                                                                 <input type="radio"  name="radio2[0]" class="ex-paint" value="ex_repaint" data-val="0">
-                                                                                <label class="custom-control-label" for="customRadio4"></label>
+                                                                                <!--<label class="custom-control-label" for="customRadio4"></label>-->
                                                                             </div></td>
-                                                                        <td><input name="room-name2[0]" type="text" class="form-control ext-room-name"></td>
-                                                                        <td><input name="appr-sqft2[0]" type="text" class="form-control ext-appr-sqft"></td>
+                                                                        <td><input name="room-name1[0]" type="text" class="form-control ext-room-name"></td>
+                                                                        <td><input name="appr-sqft1[0]" type="text" class="form-control ext-appr-sqft"></td>
                                                                         <td class="ex-paintclass">
                                                                         </td>
                                                                         <td class="text-center general-rate2"><b><span class="ex_price"></span></b></td>
@@ -235,7 +235,8 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                 </div>
                      
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
-                                            <b>Total : </b><span class="badge badge-secondary home-total total1"></span>
+                                            <b>Total : </b><span class="badge badge-secondary total1"></span>
+                                             <input name="general-total" type="hidden" class="form-control" id="general-total">
                                         </div>
                                     </div>
                                 </div>
@@ -256,11 +257,11 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
             <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
             <td scope="row" align="center"><div class="custom-control custom-radio">
                     <input type="radio"  name="radio1[<%= element.i %>]" class="rad-paint" value="fresh" data-val="<%= element.i %>">
-                    <label class="custom-control-label" for="customRadio1" ></label>
+                    <!--<label class="custom-control-label" for="customRadio1" ></label>-->
                 </div></td>
             <td><div class="custom-control custom-radio">
                     <input type="radio"  name="radio1[<%= element.i %>]" class="rad-paint" value="repaint" data-val="<%= element.i %>" >
-                    <label class="custom-control-label" for="customRadio2"></label>
+                    <!--<label class="custom-control-label" for="customRadio2"></label>-->
                 </div></td>
             <td><input name="room-name1[<%= element.i %>]" type="text" class="form-control int-room-name"></td>
             <td><input name="appr-sqft1[<%= element.i %>]" type="text" class="form-control int-appr-sqft"></td>
@@ -276,18 +277,18 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
             <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
             <td scope="row" align="center"> <div class="custom-control custom-radio">
                     <input type="radio"  name="radio2[<%= element.i %>]" class="ex-paint" value="ex_fresh" data-val="<%= element.i %>">
-                    <label class="custom-control-label" for="customRadio3"></label>
+                    <!--<label class="custom-control-label" for="customRadio3"></label>-->
                 </div></td>
             <td><div class="custom-control custom-radio">
                     <input type="radio" name="radio2[<%= element.i %>]" class="ex-paint" value="ex_repaint" data-val="<%= element.i %>">
-                    <label class="custom-control-label" for="customRadio4"></label>
+                    <!--<label class="custom-control-label" for="customRadio4"></label>-->
                 </div></td>
-            <td><input name="room-name2[<%= element.i %>]" type="text" class="form-control ext-room-name"></td>
-            <td><input name="appr-sqft2[<%= element.i %>]" type="text" class="form-control ext-appr-sqft"></td>
+            <td><input name="room-name1[<%= element.i %>]" type="text" class="form-control ext-room-name"></td>
+            <td><input name="appr-sqft1[<%= element.i %>]" type="text" class="form-control ext-appr-sqft"></td>
             <td class="ex-paintclass">
             </td>
             <td class="text-center general-rate2"><b><span class="ex_price"></span></b></td>
-            <td id="ex-general-amount"><b><span class="general_amount"></span>  </b></td>
+            <td id="ex-general-amount"><b><span class="general_amount"></span>  </b>
         </tr>
 
     </script>
@@ -310,12 +311,12 @@ jQuery(document).ready(function () {
                 i: counter
             };
             $(".tbody1").hide().append(tpl(tplData)).show('slow');
-//            $('input[name="room-name1['+counter+']"]').rules("add", {
-//                required: true
-//            });
-//            $('input[name="appr-sqft1['+counter+']"]').rules("add", {
-//                required: true
-//            });
+            $('input[name="room-name1['+counter+']"]').rules("add", {
+                required: true
+            });
+            $('input[name="appr-sqft1['+counter+']"]').rules("add", {
+                required: true
+            });
 //            $('input[name="radio1['+counter+']"]').rules("add", {
 //                required: true
 //            });
@@ -328,9 +329,17 @@ jQuery(document).ready(function () {
             counter += 1;
         });
             
+       
+            
        $('body').on('click','.remove_row',function(){
+            var amt = $(this).closest('tr').find('.general_amount').text();
+//            alert(amt);
+            var to = $(".total1").html();
+            total = to - amt;
+//            alert(to);
          $(this).closest('.show-row').remove();
-//         general_amount();
+         $('.total1').text(total);
+         $('#general-total').val(total);
         });
             
                                         $('body').on('click', '.rad-paint' , function(){  
@@ -342,14 +351,14 @@ jQuery(document).ready(function () {
                                                        var general_amount= _that.find('.general_amount').text('');
                                                      });    
             
-                                       $('body').on('blur keyup','.int-appr-sqft',function(){
+                                $('body').on('blur keyup','.int-appr-sqft',function(){
                                                         var _that= $(this).closest('tr');
                                                          var approx_rate=  _that.find('.int-appr-sqft').val();
                                                          var freshpaint_price =_that.find(':selected').data('price'); 
                                                     calculate(approx_rate,freshpaint_price,_that);
                                                    });     
 
-                                 $('body').on('change','.int-fresh-paint',function(){
+                                $('body').on('change','.int-fresh-paint',function(){
                                                     var _that=$(this).closest('tr');
                                                     var freshpaint_price = $(this).find(':selected').data('price');   
                                                   var general_rate= _that.find('.fresh_price').text(freshpaint_price);
@@ -357,7 +366,7 @@ jQuery(document).ready(function () {
                                                     calculate(approx_rate,freshpaint_price,_that);
                                                 });
 
-                                 $('body').on('change','.int-re-paint',function(){
+                                $('body').on('change','.int-re-paint',function(){
                                                         var _that=$(this).closest('tr');
                                                       var freshpaint_price = $(this).find(':selected').data('price');   
                                                     var general_rate=  _that.find('.fresh_price').text(freshpaint_price);
@@ -377,6 +386,7 @@ jQuery(document).ready(function () {
 
                                                     });   
                                   $('.total1').text(sum);
+                                  $('#general-total').val(sum);
                                            }
 
 
@@ -442,8 +452,9 @@ jQuery(document).ready(function () {
             
        $('body').on('click','.remove_row',function(){
          $(this).closest('.show-row2').remove();
-         general_amount();
+//         general_amount();
         });
+            
             
                             $('body').on('click', '.ex-paint' , function(){  
                                 var _that= $(this).closest('tr');
@@ -489,6 +500,7 @@ jQuery(document).ready(function () {
                                                                 }
               });
               $('.total1').text(sum);
+             $('#general-total').val(sum);
                        }
             
    
@@ -544,27 +556,31 @@ jQuery(document).ready(function () {
                 'appr-sqft1[0]':{
                         required:true,
                     },
-            'selecti1[0]':{
-                        required:true,
-                    },
-            'selectr1[0]':{
-                        required:true,
-                    },
+//            'selecti1[0]':{
+//                        required:true,
+//                    },
+//            'selectr1[0]':{
+//                        required:true,
+//                    },
             'project-name':{
             required: true,
             },
+            
            },
         messages: {
                 'name': {
-		required :"Please Enter Your Name",
+		required :"Full Name",
+		},
+            'project-name': {
+		required :"Project Name",
 		},
             'phone': {
-		required :"Please Enter Your Phone Number",
+		required :"Phone Number",
 		},
-		'room-name1[0]':{
-		required: "Please Enter Room Name",
-		},
-                'email': "Please Enter Valid Email Address",
+//		'room-name1[0]':{
+//		required: "Room Name",
+//		},
+                'email': "Email Address",
                
             },
              

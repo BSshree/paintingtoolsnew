@@ -348,25 +348,25 @@ $script = <<< JS
            },
         messages: {
                 'name': {
-		required :"Please Enter Your Name",
+		required :"Full Name",
 		},
 		'wall-height':{
-		required: "Please Enter Height",
-		number: "Please Enter Valid Height"
+		required: "Height",
+		number: "Height"
 		},
                 'wall-width':{
-		required: "Please Enter Width",
-		number: "Please Enter Valid Width"
+		required: "Width",
+		number: "Width"
 		},
-                'email': "Please Enter Valid Email Address",
+                'email': "Email Address",
                  'royal-design': {
-		required :"Please Select Design",
+		required :"Select Design",
 		},
                 'phone': {
-                    required :"Please Enter Your Number",
+                    required :"Phone  Number",
                     },
                 'radio':{
-                    required:"Please Select Option"
+                    required:"Select Option"
                 },
                
             },

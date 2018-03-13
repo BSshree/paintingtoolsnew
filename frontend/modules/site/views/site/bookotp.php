@@ -117,7 +117,7 @@ use yii\widgets\ActiveForm;
          
         echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','data-type'=>'item','required'=>true])->dropDownList($services)->label('Service'); ?>
  
-       <div style="display:none" class="form-group show-item-hidden">
+       <div style="display:none" class="form-group show-gift-plan">
      <!--<label class="control-label1">Service</label>-->
     <input id="item" type="text"  class="form-control item-default-load" />
     <!--<input id="item" type="text"  class="form-control" />-->

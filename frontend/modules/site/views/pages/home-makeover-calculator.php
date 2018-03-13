@@ -255,18 +255,18 @@ $script = <<< JS
                },
             messages: {
                     'name': {
-                    required :"Please Enter Your Name",
+                    required :"Full Name",
                     },
                     'phone': {
-                    required :"Please Enter Your Number",
+                    required :"Phone Number",
                     },
                    'email': {
-                    required :"Please Enter Your Email Address",
+                    required :"Email Address",
                     },
                     'room-name[0]':{
-                    required: "Please Enter Room Name",
+                    required: "Room Name",
                     },
-                    'email': "Please Enter Valid Email Address",
+                    'email': "Email Address",
 
                 },
 
