@@ -34,7 +34,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
         
       </div>
       
-      
+      test
           
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="1">
         <h2> Statues  </h2>
