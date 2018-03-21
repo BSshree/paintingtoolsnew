@@ -86,7 +86,7 @@ $script = <<< JS
     $("#Bookanotp").on('shown.bs.modal', function (e) {
         var servicename = $(e.relatedTarget).data('servicename');
         if(servicename){
-            console.log(servicename);
+             $("#sms-type_service").val(servicename);
         }        
      }); 
 
@@ -157,10 +157,6 @@ $script = <<< JS
             }
 
      if( last_part=='potraits-statues-murals'){
-        
-       
-
-        
       // var potr = $('#metal-book').val();
         //var sta = $('#statue-book').data('pot')
         //var met = $('#metal-book').data('pot')
@@ -214,7 +210,7 @@ $script = <<< JS
         //alert(cap);
         var res_str = cap.replace(/-/g, ' ');    
               //  alert(res_str);
-            $("#sms-type_service").val(res_str);
+           // $("#sms-type_service").val(res_str);
         }
 
         $.ajax({

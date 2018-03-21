@@ -396,24 +396,26 @@ class SiteController extends Controller {
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
                 // $token = 'rGdiHxtdXw';
-                $token = 'ZVDzjxMguN';
-                $mobile = $data['req_val'];
-                $rndno = rand(1000, 9999);
-                $message = urlencode("Your otp number is " . $rndno);
-                $site = 'FSTSMS';
-                $url = "http://api.fast2sms.com/sms.php?token=" . $token . "&mob=" . $mobile . "&mess=" . $message . "&sender=" . $site . "&route=0";
-                $homepage = file_get_contents($url);
+//                $token = 'ZVDzjxMguN';
+//                $mobile = $data['req_val'];
+//                $rndno = rand(1000, 9999);
+//                $message = urlencode("Your otp number is " . $rndno);
+//                $site = 'FSTSMS';
+//                $url = "http://api.fast2sms.com/sms.php?token=" . $token . "&mob=" . $mobile . "&mess=" . $message . "&sender=" . $site . "&route=0";
+//                $homepage = file_get_contents($url);
 
                 $session['Sms'] = [
-                    'otp' => $rndno,
+                    'otp' => '11',
                     'phone' => $data['req_val'],
                 ];
                 $json["mgs"] = "success";
-                $json["otp"] = $rndno;
+                //$json["otp"] = $rndno;
+                $json["otp"] = '11';
                 echo json_encode($json);
                 exit;
             }
             if ($data['form'] == 'otp') {
+                
                 if ($data['req_val'] == $session['Sms']['otp']) {
                     $json["mgs"] = "success";
                     echo json_encode($json);
