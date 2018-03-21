@@ -29,8 +29,9 @@ class Sms extends \yii\db\ActiveRecord
     public $cheque_no;
     public $credit_no;
     public $mess;
-    
-    
+    public $plan;
+
+
     /**
      * @inheritdoc
      */

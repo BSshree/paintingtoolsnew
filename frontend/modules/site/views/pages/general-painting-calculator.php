@@ -256,7 +256,7 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                            
                         </form>
                         <div class="modal-footer text-center">
-                           <button type="button" class="btn btn2" data-toggle="modal" data-target="#Bookanotp">Book An Appointment</button>
+                           <button type="button" class="btn btn2" data-toggle="modal" data-servicename="General painting" data-target="#Bookanotp">Book An Appointment</button>
                             <?php  //Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
                             <button type="button" class="btn btn1" id="mailme-royal"  onclick="openModal()">Mail me</button>
                             <!--<button type="hidden" class="btn btn1" id="mailme-royal1" data-toggle="modal" data-target="#mailmepopup">Mail me</button>-->

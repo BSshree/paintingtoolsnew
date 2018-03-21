@@ -225,7 +225,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div></div>
                             <div class="modal-footer text-center">
-                                 <button type="button" class="btn btn2"data-toggle="modal" data-target="#Bookanotp">Book An Appointment</button>
+                                 <button type="button" class="btn btn2"data-toggle="modal" data-servicename="Royale play" data-target="#Bookanotp">Book An Appointment</button>
                                  <!--<button type="button" class="btn btn1" id="mailme-royal">Mail me</button>-->
                               <button type="button" class="btn btn1" id="mailme-royal" data-toggle="modal" data-target="#mailmepopup">Mail me</button>
 

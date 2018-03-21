@@ -31,8 +31,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
-            <?php //Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
+                        <a href="#" class="book-btn" data-toggle="modal" data-gift="Baby Plan" data-servicename="Gift a wall" data-target="#Bookanotp"> Book Now !</a>
              </div>   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 col-xl-4">
@@ -51,9 +50,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont"> 
-                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
-                        <!--<a href="#" class="book-btn"> Book Now !</a>-->
-                     <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
+                      <a href="#" class="book-btn" data-toggle="modal" data-gift="Big Head Plan" data-servicename="Gift a wall" data-target="#Bookanotp"> Book Now !</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +69,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+                    <a href="#" class="book-btn" data-toggle="modal" data-gift="Dummy Plan" data-servicename="Gift a wall" data-target="#Bookanotp"> Book Now !</a>
                     <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
                     </div>
                 </div>

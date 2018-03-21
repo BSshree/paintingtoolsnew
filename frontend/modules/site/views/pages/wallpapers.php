@@ -45,7 +45,7 @@
           
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"> 
           
-          <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-target="#Bookanotp"> Book an appointment ! </a>
+          <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-service="Wallpapers" data-target="#Bookanotp"> Book an appointment ! </a>
            </div>
           
           
@@ -105,7 +105,7 @@
           
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"> 
           
-          <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-target="#Bookanotp"> Book an appointment ! </a>
+          <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-servicename="Wallpapers" data-target="#Bookanotp"> Book an appointment ! </a>
            </div>
         </div>
     

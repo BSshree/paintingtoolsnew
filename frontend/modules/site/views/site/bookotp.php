@@ -119,17 +119,18 @@ use yii\widgets\ActiveForm;
          
         echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','data-type'=>'item','required'=>true])->dropDownList($services)->label('Service'); ?>
  
-       <div style="display:none" class="form-group show-gift-plan">
+       <!--<div style="display:none" class="form-group show-gift-plan">-->
      <!--<label class="control-label1">Service</label>-->
-    <input id="item" type="text"  class="form-control item-default-load" />
+    <!--<input id="giftawall" type="hidden"  class="form-control item-default-load" />-->
     <!--<input id="item" type="text"  class="form-control" />-->
-       </div>
+       <!--</div>-->
       <?php  echo $form->field($model, 'mess')->textInput(['class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
 
         ?>
     <div style="display:none" class="loading-image1"><img src="themes/site_theme/images/ajax-loader.gif" alt=""><br></div>
     
-    
+        <?= $form->field($model, 'plan')->hiddenInput(['value'=>''])->label(false); ?>
+
 <!--        <nav>
             <ul class="pager">-->
                 <!--<li class="next">-->

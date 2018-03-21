@@ -697,12 +697,13 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="owl-carousel owl-theme" id="inner-gallery-carousel">
-          <div class="item"> <img src="themes/site_theme/images/gallery1.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/gallery2.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/gallery3.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/gallery4.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/gallery5.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/gallery6.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/Royale-play-infinitex-pebble.jpeg" alt=""></div>
+          <div class="item">  <img src="themes/site_theme/images/Royale-Play-Dune-Drizzle.jpeg" alt=""></div>
+         
+          <div class="item"> <img src="themes/site_theme/images/Royale-Play-Jute.jpeg" alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/Royale-play-splash.jpeg" alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/Royal-Play-Canvas.jpeg" alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/Royale-play-stucco-marble.jpeg" alt=""></div>
         </div>
       </div>
     </div>
@@ -744,120 +745,3 @@ $this->title ='Wall Dressup - Royale Play';
 </div>
 
 <!-- Modal -->
-
-
-<?php
-
-$mailme = Yii::$app->getUrlManager()->createUrl("site/site/mailme");
-
-$script = <<< JS
-
-    
-        jQuery(document).ready(function () {
-        
-            $('#inlineFormCustomSelect').change(function() {
-             var nm = $(this).find(':selected').attr('data-type')
-             var nonmel = $(this).find(':selected').attr("data-nonmetallic")
-             var mel = $(this).find(':selected').attr("data-metallic")
-        
-                if(nm){
-                    $('#met').val('');
-                    $('#total-amount').text('');
-                    $('#radio-met').prop('checked', false);
-                    $('#radio-nonmet').prop('checked', false);
-                    console.log(mel);
-                    console.log( nonmel);
-                    $("#nonmetallic").html(nonmel); 
-                    $("#metallic").html(mel); 
-                    $("#metal").show();
-                   }
-                else{
-                    $("#met").val(nonmel);
-                    var total_value = ($('#w-height').val()) * ($('#w-width').val()) * nonmel;
-                    $('#total-amount').html(total_value);
-                    $("#metal").hide();
-                   }
-
-                $('#radio-nonmet').click(function() {
-//                if($('#radio-nonme').is(':checked')){
-      if(  $('#radio-nonmet').attr('checked', true)){
-                    $("#met").val(nonmel);
-                    var total_value = ($('#w-height').val()) * ($('#w-width').val()) * nonmel;
-                    $('#total-amount').html(total_value);
-                               }
-                        });
-        
-                $('#radio-met').click(function() {
-//                if($('#radio-met').is(':checked')) {
-         if(  $('#radio-met').attr('checked', true)){
-                    $("#met").val(mel);
-                    var total_value = ($('#w-height').val()) * ($('#w-width').val()) * mel;
-                    $('#total-amount').html(total_value);
-
-                           }
-                      });
-                      
-        
-            });
-        
-            $( "#w-height" ).keyup(function() {
-                 var dInput = $(this).val();
-                 var bla = $('#met').val();
-                 var wid = $('#w-width').val();
-                 $('#met').val(bla);
-                 var total_value = dInput * wid * bla;
-                 $('#total-amount').html(total_value);
-        
-              });
-        
-         $( "#w-width" ).keyup(function() {
-                 var dInput = $(this).val();
-                 var bla = $('#met').val();
-                 var heig = $('#w-height').val();
-                 $('#met').val(bla);
-                 var total_value = dInput * heig * bla;
-                 $('#total-amount').html(total_value);
-        
-              });
-        
-        });
-        
-        jQuery(document).ready(function () {
-        
-            $('#mailme-id').click(function() {
-                var h1 = $('#w-height').val();
-                var w1 = $('#w-width').val();
-                var d1 = $('#inlineFormCustomSelect').val();
-                var r1 = $('#met').val();
-                var str = $("form-royaleplay").serializeArray();
-        alert(str);
-                $.ajax({
-                type: 'GET',
-                url: '{$mailme}',
-                data:{
-                str,
-                
-//                    he1:h1,
-//                        we1:w1,
-//                            de1:d1,
-//                                ra1:r1
-                                    },
-                success: function(data) {
-//                    alert(data)
-//                    $("l").text(data);
-
-                }
-            });
-        
-   
-            });
-
-                 });
-
-        
-        
-        
-        
-JS;
-$this->registerJs($script, View::POS_END);
-?>

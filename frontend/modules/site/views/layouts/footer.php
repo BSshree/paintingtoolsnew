@@ -85,9 +85,15 @@ $script = <<< JS
      
     $("#Bookanotp").on('shown.bs.modal', function (e) {
         var servicename = $(e.relatedTarget).data('servicename');
+       
         if(servicename){
              $("#sms-type_service").val(servicename);
-        }        
+        
+        }
+            if(servicename=="Gift a wall"){
+          var giftname = $(e.relatedTarget).data('gift');
+          $("#sms-plan").val(giftname);
+        }
      }); 
 
     var navListItems = $('div.setup-panel div a'),
@@ -242,6 +248,7 @@ $script = <<< JS
             curInputs = curStep.find("input[type='text'],input[type='url']");
                 
         var phone_no = $("#phone").val();
+        var gift = $("#giftawall").val();
         var filter = /^[0-9-+]+$/;
         if(filter.test(phone_no)){
 
@@ -250,7 +257,8 @@ $script = <<< JS
                 type : 'POST',                   
                 data: {
                   req_val: phone_no, 
-                  form: 'phone'
+                  form: 'phone',
+                gift1: gift
                 },
                 success: function(data) {
 

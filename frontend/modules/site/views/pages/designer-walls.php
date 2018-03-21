@@ -24,7 +24,7 @@ $this->title ='Wall Dressup - Designer walls';
           <div class="gp-txt1">
             <h2> vastu murals </h2>
             <p class="designerwalls-txt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra nibh a augue vehicula tristique. Suspendisse vestibulum nisl quis elementum luctus. Donec dictum eget dolor vitae vehicula. Morbi sit amet ante in diam elementum iaculis eget sed sem. Etiam aliquam suscipit lacinia. Aenean odio tortor, facilisis vel tellus sed, malesuada imperdiet lacus.  </p>
-            <p> <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
+            <p> <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-servicename="Designer walls" data-target="#Bookanotp"> Book Now ! </a> </p>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@ $this->title ='Wall Dressup - Designer walls';
           <div class="gp-txt1">
             <h2> Kerala murals </h2>
             <p class="designerwalls-txt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra nibh a augue vehicula tristique. Suspendisse vestibulum nisl quis elementum luctus. Donec dictum eget dolor vitae vehicula. Morbi sit amet ante in diam elementum iaculis eget sed sem. Etiam aliquam suscipit lacinia. Aenean odio tortor, facilisis vel tellus sed, malesuada imperdiet lacus.  </p>
-            <p> <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
+            <p> <a href="#" class="btn btn1 btn1-1" data-toggle="modal" data-servicename="Designer walls" data-target="#Bookanotp"> Book Now ! </a> </p>
           </div>
         </div>
       </div>

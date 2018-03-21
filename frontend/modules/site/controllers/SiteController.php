@@ -80,7 +80,6 @@ class SiteController extends Controller {
     }
 
     public function actionMailme() {
-//        $result =0;
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();
@@ -147,7 +146,6 @@ class SiteController extends Controller {
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();
-//            echo'<pre>'; print_r($data); exit;
             $plan_name = array();
             $room_name = array();
             $others = array();
@@ -166,9 +164,6 @@ class SiteController extends Controller {
             for ($i = "0"; $i < count($room_name); $i++) {
                 $mail_body .= "<th>Room Name: </th><td>" . $room_name[$i] . "</td> <th> Plan Name: </th><td> " . $plan_name[$i] . " </td><th> Rate: </th><td> " . $price[$plan_name[$i]] . " </td>";
             }
-            //print_r($others); exit;
-//             print_r($others['name']); exit;
-            //echo $mail_body; exit;
 
             if ($data['form'] == 'home') {
                 $mail_sub1 = 'Painting Tool Home-Makeover Calculation ';
@@ -252,10 +247,6 @@ class SiteController extends Controller {
                              break;
                          }
                      }
-//                    if (isset($data['interior']['fresh']) || isset($data['interior']['repaint'])) {
-//                        $mail_body1 .= "<b>Interior</b>";
-//                    } else { }
-                    
                     foreach ($data['interior'] as $value) {
                         if (array_key_exists('fresh', $value)) {
                             $type = $value['fresh'];
@@ -278,10 +269,6 @@ class SiteController extends Controller {
                          }
                      }
                      
-//                    if (isset($data['exterior']['fresh']) || isset($data['exterior']['repaint'])) {
-//                        $mail_body1 .= "<b>Exterior</b>";
-//                    } else { }
-                    
                     foreach ($data['exterior'] as $value) {
                         if (array_key_exists('fresh', $value)) {
                             $type = $value['fresh'];
@@ -314,9 +301,6 @@ class SiteController extends Controller {
                              break;
                          }
                      }
-//                    if (in_array_r("'radio1'",$data['interior']) ) {
-//                       
-//                    } else { }
                     
                     foreach ($data['interior'] as $value) {
                         if (array_key_exists('fresh', $value)) {
@@ -333,8 +317,6 @@ class SiteController extends Controller {
                 }
 
                 if (!empty($data['exterior'])) {
-//                    print_r($data['exterior']);
-                    //exit;
                     foreach ($data['exterior'] as $item){ 
                          if (array_key_exists("'radio2'", $item)) { 
                              $mail_body2 .= "<tr><td colspan='6'><b>Exterior</b></td></tr>";
@@ -395,27 +377,26 @@ class SiteController extends Controller {
             $json = array();
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
-                // $token = 'rGdiHxtdXw';
-//                $token = 'ZVDzjxMguN';
-//                $mobile = $data['req_val'];
-//                $rndno = rand(1000, 9999);
-//                $message = urlencode("Your otp number is " . $rndno);
-//                $site = 'FSTSMS';
-//                $url = "http://api.fast2sms.com/sms.php?token=" . $token . "&mob=" . $mobile . "&mess=" . $message . "&sender=" . $site . "&route=0";
-//                $homepage = file_get_contents($url);
+//                 $token = 'rGdiHxtdXw';
+                $token = 'ZVDzjxMguN';
+                $mobile = $data['req_val'];
+                $rndno = rand(1000, 9999);
+                $message = urlencode("Your otp number is " . $rndno);
+                $site = 'FSTSMS';
+                $url = "http://api.fast2sms.com/sms.php?token=" . $token . "&mob=" . $mobile . "&mess=" . $message . "&sender=" . $site . "&route=0";
+                $homepage = file_get_contents($url);
 
                 $session['Sms'] = [
-                    'otp' => '11',
+                    'otp' => $rndno,
                     'phone' => $data['req_val'],
                 ];
                 $json["mgs"] = "success";
-                //$json["otp"] = $rndno;
-                $json["otp"] = '11';
+                $json["otp"] = $rndno;
+//                $json["otp"] = '11';
                 echo json_encode($json);
                 exit;
             }
             if ($data['form'] == 'otp') {
-                
                 if ($data['req_val'] == $session['Sms']['otp']) {
                     $json["mgs"] = "success";
                     echo json_encode($json);
@@ -447,12 +428,15 @@ class SiteController extends Controller {
             $message = $post['Sms']['mess'];
             $phone = $session['Sms']['phone'];
             $service = $post['Sms']['type_service'];
+            $plans = $post['Sms']['plan'];
 
             $mail_sub1 = 'Painting Tool-Booking Appointment ';
             $mail_sub2 = 'REQUEST FOR AN APPOINTMENT';
             $mail_body1 = "<p>Hi Admin,</p>";
             $mail_body1 .= "A new appointment is booked from customer. <br><br>";
-            $mail_body1 .= "Name: " . $username . "<br>Email: " . $email . "<br>Phone: " . $phone . "<br> Service: " . $service . "<br> Message: " . $message . "<br><br>";
+            $mail_body1 .= "Name: " . $username . "<br>Email: " . $email . "<br>Phone: " . $phone . "<br> Service: " . $service . "<br> Message: " . $message . "<br>";
+           if(isset($plans))
+            $mail_body1 .= "Plan Name: " . $plans ."<br><br>";
             $mail_body1 .= "<strong>Regards, </strong><br>";
             $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
 
@@ -480,6 +464,10 @@ class SiteController extends Controller {
                 unset($session['Sms']);
                 echo "success";
                 exit;
+//                $json=array();
+//                    $json["mgs"] = "success";
+//                    echo json_encode($json);
+//                    exit;
             } else {
                 // return $this->redirect(['site/index']);
                 echo "error";
@@ -497,7 +485,6 @@ class SiteController extends Controller {
         $model = new Sms();
          if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();
-            //echo'<pre>'; print_r($data); exit;
         
             $na1 = $data['na1'];
             $em1 = $data['em1'];
