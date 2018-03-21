@@ -377,8 +377,8 @@ class SiteController extends Controller {
             $json = array();
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
-//                 $token = 'rGdiHxtdXw';
-                $token = 'ZVDzjxMguN';
+                 $token = 'rGdiHxtdXw';
+              //  $token = 'ZVDzjxMguN';
                 $mobile = $data['req_val'];
                 $rndno = rand(1000, 9999);
                 $message = urlencode("Your otp number is " . $rndno);
