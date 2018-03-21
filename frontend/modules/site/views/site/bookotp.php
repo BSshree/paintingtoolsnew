@@ -109,10 +109,12 @@ use yii\widgets\ActiveForm;
                         'Gift a wall' => 'Gift a wall',
                         'Concept walls' => 'Concept walls',
                         'Designer walls' => 'Designer walls',
-                        'Wall paper' => 'Wall paper',
+                        'Wallpapers' => 'Wallpapers',
                         'Royale play' => 'Royale play',
                         'Home makeover' => 'Home makeover',
-                        'Potraits/Metal murals/Statues' => 'Potraits/Metal murals/Statues',
+                        'Potraits' => 'Potraits',
+                        'Metal murals' => 'Metal murals',
+                        'Statues' => 'Statues',
                     );
          
         echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','data-type'=>'item','required'=>true])->dropDownList($services)->label('Service'); ?>

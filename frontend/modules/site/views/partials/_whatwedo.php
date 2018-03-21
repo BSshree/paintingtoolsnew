@@ -42,6 +42,7 @@ use yii\helpers\Url;
               </a>
               <div class="pro-name"> <a href="#"> DESIGNER <br/>
                 WALLS </a> </div>
+                 <?= Html::a('DESIGNER', ['/designer-walls'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>
@@ -53,6 +54,7 @@ use yii\helpers\Url;
               <div class="line"> </div>
               </a>
               <div class="pro-name"> <a href="#"> WALLPAPERS </a> </div>
+              <?= Html::a('WALLPAPERS', ['/wallpapers'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>
@@ -93,6 +95,7 @@ use yii\helpers\Url;
                 STATUES <br/>
                 METAL MURALS <br/>
                 </a> </div>
+               <?= Html::a('', ['/potraits-statues-murals'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>
@@ -104,6 +107,7 @@ use yii\helpers\Url;
               <div class="line"> </div>
               </a>
               <div class="pro-name"> <a href="#">Concept walls </a> </div>
+                <?= Html::a('CONCEPT WALLS', ['/concept-walls'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>

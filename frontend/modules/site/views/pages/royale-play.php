@@ -43,7 +43,7 @@ $this->title ='Wall Dressup - Royale Play';
           <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="row">
               <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-              <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Brushing.jpeg" alt=""> </a>
+              <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Brushing.jpeg" alt=""> </a>
               <div class="gp-txt1">
             <h2> Brushing </h2>
             <div class="royalplay-price">
@@ -61,7 +61,7 @@ $this->title ='Wall Dressup - Royale Play';
       </div>
           
         <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Spatula.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Spatula.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Spatula </h2>
             <div class="royalplay-price">
@@ -78,7 +78,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Combing.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Combing.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Combing </h2>
             <div class="royalplay-price">
@@ -95,7 +95,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Colorwash.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Colorwash.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Colourwash </h2>
             <div class="royalplay-price">
@@ -112,7 +112,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Ragging.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Ragging.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Ragging </h2>
             <div class="royalplay-price">
@@ -129,7 +129,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Sponging.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Sponging.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Sponging </h2>
             <div class="royalplay-price">
@@ -146,7 +146,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Dapple.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Dapple.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Dapple </h2>
             <div class="royalplay-price">
@@ -163,7 +163,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Crinkle.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Crinkle.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Crinkle </h2>
             <div class="royalplay-price">
@@ -180,7 +180,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Canvas.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Canvas.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Canvas </h2>
             <div class="royalplay-price">
@@ -197,7 +197,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Fizz.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Fizz.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Fizz </h2>
              <div class="royalplay-price">
@@ -214,7 +214,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Seashell.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Seashell.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Seahell </h2>
              <div class="royalplay-price">
@@ -231,7 +231,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Delta.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Delta.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Delta </h2>
              <div class="royalplay-price">
@@ -248,7 +248,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Torrent.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Torrent.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Torrent </h2>
             <div class="royalplay-price">
@@ -265,7 +265,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Spiral.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Spiral.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Spiral </h2>
              <div class="royalplay-price">
@@ -282,7 +282,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-         <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-splash.jpeg" alt=""> </a>
+         <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-splash.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Splash </h2>
              <div class="royalplay-price">
@@ -299,7 +299,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
       </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Timber.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Timber.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Timber </h2>
              <div class="royalplay-price">
@@ -317,7 +317,7 @@ $this->title ='Wall Dressup - Royale Play';
       </div>
           
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royal-Play-Disc.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royal-Play-Disc.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Disc </h2>
              <div class="royalplay-price">
@@ -341,7 +341,7 @@ $this->title ='Wall Dressup - Royale Play';
           <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
             <div class="row">
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-        <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/royale-play-textile-crushed-silk-room.jpeg" alt=""> </a>
+        <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/royale-play-textile-crushed-silk-room.jpeg" alt=""> </a>
            <div class="gp-txt1">
             <h2> Crushed silk </h2>
              <div class="royalplay-price">
@@ -354,7 +354,7 @@ $this->title ='Wall Dressup - Royale Play';
       </div>
                 
               <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                 <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/AP-TEXTILE-35372-denim.jpeg" alt=""> </a>
+                 <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/AP-TEXTILE-35372-denim.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Denim</h2>
             <div class="royalplay-price">
@@ -366,7 +366,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
          </div>
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Jute.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Jute.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Jute </h2>
            <div class="royalplay-price">
@@ -378,7 +378,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/royale-play-textile-leather-room.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/royale-play-textile-leather-room.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Leather </h2>
             <div class="royalplay-price">
@@ -390,7 +390,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-textile-kora-grass.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-textile-kora-grass.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Kora grass </h2>
             <div class="royalplay-price">
@@ -402,7 +402,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
                  <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/royale-play-textile-yarn-room.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/royale-play-textile-yarn-room.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Yarn </h2>
             <div class="royalplay-price">
@@ -420,7 +420,7 @@ $this->title ='Wall Dressup - Royale Play';
             <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="row">
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                 <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-shale.jpeg" alt=""> </a>
+                 <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-shale.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Shale </h2>
            <div class="royalplay-price">
@@ -437,7 +437,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-               <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-bricks.jpeg" alt=""> </a>
+               <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-bricks.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Bricks </h2>
             <div class="royalplay-price">
@@ -455,7 +455,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                 <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-pebble.jpeg" alt=""> </a>
+                 <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-pebble.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>   Pebbles </h2>
              <div class="royalplay-price">
@@ -472,7 +472,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-crossroad.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-crossroad.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Crossroad </h2>
              <div class="royalplay-price">
@@ -489,7 +489,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-ripple.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-ripple.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Ripple </h2>
             <div class="royalplay-price">
@@ -506,7 +506,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-infinitex-breeze.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-infinitex-breeze.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Breeze </h2>
              <div class="royalplay-price">
@@ -530,7 +530,7 @@ $this->title ='Wall Dressup - Royale Play';
             <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="row">
              <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/Royale-Play-Dune-Drizzle.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/Royale-Play-Dune-Drizzle.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Drizzle </h2>
            <div class="royalplay-price">
@@ -542,7 +542,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-lg-3 col-xl-3 royalplay-thumb">
-                 <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-Play-Dune-Halo.jpeg" alt=""> </a>
+                 <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-Play-Dune-Halo.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Halo </h2>
             <div class="royalplay-price">
@@ -561,7 +561,7 @@ $this->title ='Wall Dressup - Royale Play';
             <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="row">
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/Royale-play-safari-classic.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/Royale-play-safari-classic.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Classic </h2>
            <div class="royalplay-price">
@@ -573,7 +573,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/Royale-Play-Safari Sleet.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/Royale-Play-Safari Sleet.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Sleet </h2>
             <div class="royalplay-price">
@@ -594,7 +594,7 @@ $this->title ='Wall Dressup - Royale Play';
             <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="row">
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/Royale-play-antico-linea.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/Royale-play-antico-linea.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2>  Linea </h2>
            <div class="royalplay-price">
@@ -606,7 +606,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>
                <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-antico-classique.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-antico-classique.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Classicque </h2>
             <div class="royalplay-price">
@@ -627,7 +627,7 @@ $this->title ='Wall Dressup - Royale Play';
              
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"> <a href="#"> <img src="themes/site_theme/images/Royale-play-stucco-marble.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"> <a href=""> <img src="themes/site_theme/images/Royale-play-stucco-marble.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Marble</h2>
             <div class="royalplay-price">
@@ -649,7 +649,7 @@ $this->title ='Wall Dressup - Royale Play';
         </div>
               </div>-->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4  col-xl-3 royalplay-thumb">
-                <div class="general-painting-service1 royale-play-mn"><a href="#"> <img src="themes/site_theme/images/Royale-play-stucco-slate.jpeg" alt=""> </a>
+                <div class="general-painting-service1 royale-play-mn"><a href=""> <img src="themes/site_theme/images/Royale-play-stucco-slate.jpeg" alt=""> </a>
           <div class="gp-txt1">
             <h2> Slate </h2>
            <div class="royalplay-price">

@@ -4,6 +4,9 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\web\View;
 use yii\widgets\DetailView;
+
+$this->title ='Wall Dressup - Home-makeover';
+?>
 ?>
 <section class="slider-cont inner-page-heading">
   <div class="container">

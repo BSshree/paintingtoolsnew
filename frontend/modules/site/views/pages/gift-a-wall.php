@@ -31,7 +31,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book1"> Book Now !</a>
+                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
             <?php //Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
              </div>   </div>
             </div>
@@ -51,7 +51,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont"> 
-                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book2"> Book Now !</a>
+                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
                         <!--<a href="#" class="book-btn"> Book Now !</a>-->
                      <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
                     </div>
@@ -72,7 +72,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book3"> Book Now !</a>
+                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
                     <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
                     </div>
                 </div>
@@ -81,5 +81,23 @@ $this->title ='Wall Dressup - Gift a wall';
     </div>
     
 </section>
-<?php echo $this->render('@frontend/modules/site/views/partials/_gift_a_wall_gallery'); ?> 
+<div class="inner-gallery-cont">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1">
+        <h2> Gift a wall gallery </h2>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="owl-carousel owl-theme" id="inner-gallery-carousel">
+          <div class="item"> <img src="themes/site_theme/images/gallery1.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gallery2.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gallery3.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gallery4.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gallery5.jpg"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gallery6.jpg"  alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <?php echo $this->render('@frontend/modules/site/views/partials/inner_testimonials'); ?> 

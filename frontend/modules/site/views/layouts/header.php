@@ -31,9 +31,13 @@ use yii\bootstrap\Modal;
           <li><a href="#">What We do </i></a>
             <ul>
               <li> <a href="gift-a-wall">Gift a wall</a> </li>
+              <li> <a href="general-painting">General painting </a> </li>  
+              <li> <a href="designer-walls">Designer walls </a> </li>
+              <li> <a href="wallpapers">Wallpapers </a> </li>
               <li><a href="royale-play"> Royale play </a> </li>
               <li> <a href="home-makeover">Home makeover</a> </li>
-              <li> <a href="general-painting">General painting </a> </li>
+              <li> <a href="potraits-statues-murals">Potraits/Statues/Murals</a> </li>
+              <li> <a href="concept-walls">Concept walls</a> </li>
             </ul>
           </li>
           <li><a href="#"> Testimonials </a> </li>

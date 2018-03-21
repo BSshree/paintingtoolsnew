@@ -105,6 +105,26 @@ return [
                     'route' => '/site/site/pages',
                     'defaults' => ['slug' =>'general-painting-calculator'],
                    ],
+                [
+                    'pattern' => '/concept-walls/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'concept-walls'],
+                   ],
+                [
+                    'pattern' => '/potraits-statues-murals/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'potraits-statues-murals'],
+                   ],
+                [
+                    'pattern' => '/designer-walls/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'designer-walls'],
+                   ],
+                [
+                    'pattern' => '/wallpapers/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'wallpapers'],
+                   ],
             ],
 
          

@@ -177,7 +177,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                                 <button type="button" class="close" data-dismiss="modal"   aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">
+                                                <!--<form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">-->
                                                     <div class="form-group">
                                                         <label class="control-label1">Full Name</label>
                                                         <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
@@ -202,14 +202,16 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                                     </div>
 
                                                     <div class="form-group mailme-show" style="display:none">
-                                                        <div class="row mb-4">
-                                                            <div class="col-3">
-                                                                <div class="form-group" id="successMessage"> </div>
+                                                        <!--<div class="row mb-4">-->
+                                                            <!--<div class="col-3">-->
+                                                                <div class="form-group " >
+                                                                  <p id="successMessage"> </p>  
+                                                                </div>
                                                                 <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
-                                                            </div>
-                                                        </div>
+                                                            <!--</div>-->
+                                                        <!--</div>-->
                                                     </div>
-                                                </form>
+                                                <!--</form>-->
                                             </div>
                                         </div>
                                     </div>
@@ -407,12 +409,14 @@ $script = <<< JS
                 success: function(data) {
                 if(data == 'success'){
                  $("#successMessage").html( 'Your request has been send sucessfully!!' );
-//                 $("#successMessage").fadeOut(3000);
-                $('#royalplay-validate')[0].reset(); 
-                 $(".loading-image").hide(); 
-                $('#radio-met').prop('checked', false);
-                $('#radio-nonmet').prop('checked', false);
-                $('#total-amount').text('');
+                //$("#successMessage").fadeOut(3000);
+                  setTimeout(function(){  $("#successMessage").hide("slow"); $("#successMessage").html("");
+                  $('#mailmepopup').modal('hide'); }, 5000);
+                  $('#royalplay-validate')[0].reset(); 
+                  $(".loading-image").hide(); 
+                  $('#radio-met').prop('checked', false);
+                  $('#radio-nonmet').prop('checked', false);
+                  $('#total-amount').text('');
                 }
                 
                 },

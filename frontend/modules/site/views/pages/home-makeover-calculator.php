@@ -28,9 +28,7 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                     <form id="home-makeover-validate"  name="home-makeover" class="home-makeover-validate" method="post" action="">
                         <div class="modal-body">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <div class="form-group pull-right">   
-                                    <button type="button" class="btn btn-dark add-row-button" id="add-row-button"><i class="fas fa-plus "> </i> Add Row</button>
-                                </div>
+                               
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="myTable">
                                         <thead>
@@ -56,6 +54,9 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
 
                                         </tbody>
                                     </table>
+                                     <div class="form-group pull-right">   
+                                    <button type="button" class="btn btn-dark add-row-button" id="add-row-button"><i class="fas fa-plus "> </i> Add Row</button>
+                                </div>
                                 </div>
                                 <!--                                <div class="" id="mailme-show" style="display:none">
                                                                     <div class="form-group ">
@@ -91,7 +92,7 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                                                 <button type="button" class="close" data-dismiss="modal"   aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">
+                                                <!--<form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">-->
                                                     <div class="form-group">
                                                         <label class="control-label1">Full Name</label>
                                                         <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
@@ -116,14 +117,14 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                                                     </div>
 
                                                     <div class="form-group mailme-show" style="display:none">
-                                                        <div class="row mb-4">
-                                                            <div class="col-3">
+                                                        <!--<div class="row mb-4">-->
+                                                            <!--<div class="col-3">-->
                                                                 <div class="form-group" id="successMessage"> </div>
                                                                 <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
-                                                            </div>
-                                                        </div>
+                                                            <!--</div>-->
+                                                        <!--</div>-->
                                                     </div>
-                                                </form>
+                                                <!--</form>-->
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +293,8 @@ $script = <<< JS
                     success: function(data) {                    
                     if(data == 'success'){                    
                     $("#successMessage").html( 'Your request has been send sucessfully!!' );
-//                    setTimeout(function(){  $("#successMessage").hide("slow"); $("#successMessage").html(""); }, 5000);
+                    setTimeout(function(){  $("#successMessage").hide("slow"); $("#successMessage").html(""); 
+                        $('#mailmepopup').modal('hide');  }, 5000);
                     $('#home-makeover-validate')[0].reset(); 
                     $("#tbody tr.show-row").not(':first').remove();
                     $("#tbody tr.show-row:first .home-rate").text('');

@@ -17,25 +17,33 @@ use yii\widgets\ActiveForm;
             <span> Fill out the form below and get a free quote today.</span> </div>
             
             
-            <form  id="formvalidate"  name="myForm" class="formValidate" method="post" action="">
+        <form  id="requestaquote"  name="requestaquote" class="formValidate" method="post" action="">
           <div class="form-group">
-              <input name="name" type="text" class="form-control" placeholder="Name" >
+              <input name="name" id="req-name" type="text" class="form-control" placeholder="Name" >
           </div>
           <div class="form-group">
-            <input name="email" type="text" class="form-control" placeholder="Email" >
+            <input name="email" id="req-email"  type="text" class="form-control" placeholder="Email" >
           </div>
           <div class="form-group">
-            <input name="phone" type="text" class="form-control" placeholder="Phone">
+            <input name="phone" id="req-phone"  type="text" class="form-control" placeholder="Phone">
           </div>
           <div class="form-group">
-            <textarea name="mess" cols="" rows="" class="form-control msg" placeholder="Message"></textarea>
+            <textarea name="mess" id="req-mess" cols="" rows="" class="form-control msg" placeholder="Message"></textarea>
           </div>
           <div class="form-group text-center">
-           <?php //echo $this->render('@frontend/modules/site/views/site/requestquote'); ?> 
-                <?=  Html::submitButton('Send Message', ['class' => 'btn contact-btn1 contact-btn2']) ?>
-              <!--<input type="submit" id="submit" name="submit" class="btn contact-btn1 contact-btn2" value="Send Message" >-->
+              <input type="submit" id="request-submit" name="submit" class="btn contact-btn1 contact-btn2" value="Send Message" >
           </div>
-            </form>
+           <div class="form-group request-show" style="display:none">
+            <!--<div class="row mb-4">-->
+                <!--<div class="col-3">-->
+                <div class="form-group " >
+                  <p id="successrequest"> </p>  
+                </div>
+                    <div class="loading-image"><img src="themes/site_theme/images/re.gif" width="8%" height="8%" alt=""> </div>
+                <!--</div>-->
+            <!--</div>-->
+            </div>
+        </form>
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-6 faq-cont offset-xl-1 "> <span> HAVE SOME QUESTIONS? </span>

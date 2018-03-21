@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\modules\site\controllers;
 
 use Yii;
@@ -12,21 +13,20 @@ use common\models\Sms;
 /**
  * Site controller
  */
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
                 'rules' => [
-                   [
-                    'actions' => ['login','error','changepassword','pages', 'bookotp', 'ajaxbookotp','mailme','mailmehome','mailmegeneral','calculators'],
-                    'allow' => true,
+                        [
+                        'actions' => ['login', 'error', 'changepassword', 'pages', 'bookotp', 'ajaxbookotp', 'mailme', 'mailmehome', 'mailmegeneral', 'calculators'],
+                        'allow' => true,
                     ],
 //                    [
 //                        'actions' => ['logout','index'],
@@ -38,7 +38,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                 //   'logout' => ['post'],
+                //   'logout' => ['post'],
                 ],
             ],
         ];
@@ -47,8 +47,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -65,276 +64,338 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
-         $model = new Sms();
+        $model = new Sms();
 
-    
-    return $this->render('/partials/_faq', [
+
+        return $this->render('/partials/_faq', [
                     'model' => $model,
         ]);
     }
-    
-     public function actionPages($slug)
-    {
-        return $this->render('/pages/'.$slug);
+
+    public function actionPages($slug) {
+        return $this->render('/pages/' . $slug);
         //return $this->render('index', ['slugname' => $slug]);
     }
-    
-        
-    
-    public function actionMailme()
-    {
+
+    public function actionMailme() {
 //        $result =0;
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
-             $data = Yii::$app->request->post();
-             $he1=  $data['he1'];
-              $we1=  $data['we1'];
-              $de1=  $data['de1'];
-              $ra1=  $data['ra1'];
-              $to1=  $data['to1'];
-              $username=  $data['na1'];
-              $email=  $data['em1'];
-              $phone=  $data['ph1'];
-              if($data['form'] == 'royal'){
-                    $mail_sub1 = 'Painting Tool-Royale-Play Calculation ' ;
-                    $mail_body1 = "<p>Hi Admin,</p>";
-                    $mail_body1 .= "A new rough estimation by a customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$username."<br>Email: ".$email." <br><br> Design: ".$de1."<br>Phone: ".$phone."<br>";
-                    $mail_body1 .=  "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br><b>Total: ".$to1."</b><br><br>";
-                    $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+            $data = Yii::$app->request->post();
+            $he1 = $data['he1'];
+            $we1 = $data['we1'];
+            $de1 = $data['de1'];
+            $ra1 = $data['ra1'];
+            $to1 = $data['to1'];
+            $username = $data['na1'];
+            $email = $data['em1'];
+            $phone = $data['ph1'];
+            if ($data['form'] == 'royal') {
+                $mail_sub1 = 'Painting Tool-Royale-Play Calculation ';
+                $mail_body1 = "<p>Hi Admin,</p>";
+                $mail_body1 .= "A new rough estimation by a customer. <br><br>";
+                $mail_body1 .= "Name: " . $username . "<br>Email: " . $email . " <br><br> Design: " . $de1 . "<br>Phone: " . $phone . "<br>";
+                $mail_body1 .= "Height: " . $he1 . " <br>Width:  " . $we1 . " <br>Rate/SqFt:  " . $ra1 . " <br><b>Total: " . $to1 . "</b><br><br>";
+                $mail_body1 .= "<strong>Regards, </strong><br>";
+                $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
 
-                    $mail_sub2 = 'REQUEST FOR CALCULATION';
-                    $mail_body2 = "<p>Hi ".$username.",</p>";
-                    $mail_body2 .= "Here you find the calculation for your requested design.<br>Thank you. <br><br>";
-                    $mail_body2 .= "Design: ".$de1."<br>";
-                    $mail_body2 .= "Height: ".$he1." <br>Width:  ".$we1." <br>Rate/SqFt:  ".$ra1." <br><b>Total: ".$to1."</b><br><br>";
-                    $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+                $mail_sub2 = 'REQUEST FOR CALCULATION';
+                $mail_body2 = "<p>Hi " . $username . ",</p>";
+                $mail_body2 .= "Here you find the calculation for your requested design.<br>Thank you. <br><br>";
+                $mail_body2 .= "Design: " . $de1 . "<br>";
+                $mail_body2 .= "Height: " . $he1 . " <br>Width:  " . $we1 . " <br>Rate/SqFt:  " . $ra1 . " <br><b>Total: " . $to1 . "</b><br><br>";
+                $mail_body2 .= "<strong>Regards, </strong><br>";
+                $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
 
-                     $emailSend1 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo('banushree@arkinfotec.com')
-                            ->setSubject($mail_sub1)
-                            ->setHtmlBody($mail_body1)
-                            ->send();
-                   $emailSend2 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo($email)
-                            ->setSubject($mail_sub2)
-                            ->setHtmlBody($mail_body2)
-                            ->send();
+                $emailSend1 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo('banushree@arkinfotec.com')
+                        ->setSubject($mail_sub1)
+                        ->setHtmlBody($mail_body1)
+                        ->send();
+                $emailSend2 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo($email)
+                        ->setSubject($mail_sub2)
+                        ->setHtmlBody($mail_body2)
+                        ->send();
 
-                    if ($emailSend1 && $emailSend2) {
-                        Yii::$app->getSession()->setFlash('success', 'Request sent successfully');
+                if ($emailSend1 && $emailSend2) {
+                    Yii::$app->getSession()->setFlash('success', 'Request sent successfully');
 //                        $result =1;
-                       // unset($session['Sms']);
-                        echo "success"; exit;
-                    } else {
-                        // return $this->redirect(['site/index']);
-                         Yii::$app->getSession()->setFlash('danger', 'Request not sent successfully');
-                          //  echo "error";exit;
-                    }
-              }
-              
-            
-            
+                    // unset($session['Sms']);
+                    echo "success";
+                    exit;
+                } else {
+                    // return $this->redirect(['site/index']);
+                    Yii::$app->getSession()->setFlash('danger', 'Request not sent successfully');
+                    //  echo "error";exit;
+                }
+            }
         }
-        
-  
-        
+
+
+
         return $this->renderAjax('/pages/royale-play', [
                     'model' => $model,
         ]);
     }
-    
-    
-     public function actionMailmehome()
-    {
+
+    public function actionMailmehome() {
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();  
+            $data = Yii::$app->request->post();
 //            echo'<pre>'; print_r($data); exit;
-            $plan_name= array();
-            $room_name= array();
+            $plan_name = array();
+            $room_name = array();
             $others = array();
-            foreach($data['data'] as $value){
-                 if(strpos($value['name'], 'room-name') !== false ){
-                       $room_name[] = $value['value'];
-                 }else if(strpos($value['name'], 'plan-name') !== false ){
-                     $plan_name[] = $value['value'];
-                 }else{
-                     $others[$value['name']] = $value['value'];
-                 }
-                 
+            foreach ($data['data'] as $value) {
+                if (strpos($value['name'], 'room-name') !== false) {
+                    $room_name[] = $value['value'];
+                } else if (strpos($value['name'], 'plan-name') !== false) {
+                    $plan_name[] = $value['value'];
+                } else {
+                    $others[$value['name']] = $value['value'];
+                }
             }
-            $price = ["Hatchling Plan" => "3000", "Baby Plan" => "6000", "Transformation Plan"=>"10000"];
+            $price = ["Hatchling Plan" => "3000", "Baby Plan" => "6000", "Transformation Plan" => "10000"];
 
             $mail_body = '';
-            for($i = "0"; $i < count($room_name); $i++){
-                $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$plan_name[$i]." </td><th> Rate: </th><td> ".$price[$plan_name[$i]]." </td>";
+            for ($i = "0"; $i < count($room_name); $i++) {
+                $mail_body .= "<th>Room Name: </th><td>" . $room_name[$i] . "</td> <th> Plan Name: </th><td> " . $plan_name[$i] . " </td><th> Rate: </th><td> " . $price[$plan_name[$i]] . " </td>";
             }
-             //print_r($others); exit;
+            //print_r($others); exit;
 //             print_r($others['name']); exit;
             //echo $mail_body; exit;
-             
-              if($data['form'] == 'home'){
-                    $mail_sub1 = 'Painting Tool Home-Makeover Calculation ' ;
-                    $mail_body1 = "<p>Hi Admin,</p>";
-                    $mail_body1 .= "A new rough estimation by a customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$others['name']."<br>Email: ".$others['email']." <br>Phone: ".$others['phone']."<br>";
-                    $mail_body1 .=  "<b>Total: ".$others['home-total']." </b><br>";
-                    $mail_body1 .= "<table cellpadding='10' cellspacing='10'>";
-                    $mail_body1 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
-                    for($i = "0"; $i < count($room_name); $i++){
-                        $mail_body1 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
-                    }
-                    $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>".$others['home-total']." </b></td></tr>";
-                    $mail_body1 .= "</table>";
-                    $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
-                    
-                    $mail_sub2 = 'REQUEST FOR CALCULATION';
-                    $mail_body2 = "<p>Hi ".$others['name'].",</p>";
-                    $mail_body2 .= "Here you find the calculation for your requested plan.<br>Thank you. <br><br>";
-                    $mail_body2 .= "<table cellpadding='10' cellspacing='10'>";
-                    $mail_body2 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
-                    for($i = "0"; $i < count($room_name); $i++){
-                        $mail_body2 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
-                    }
-                    $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>".$others['home-total']."</b></td></tr>";
-                    $mail_body2 .= "</table>";
-                    $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
-                    
-                     $emailSend1 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo('banushree@arkinfotec.com')
-                            ->setSubject($mail_sub1)
-                            ->setHtmlBody($mail_body1)
-                            ->send();
-                   $emailSend2 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo($others['email'])
-                            ->setSubject($mail_sub2)
-                            ->setHtmlBody($mail_body2)
-                            ->send();
 
-                    if ($emailSend1 && $emailSend2) {
-                       // unset($session['Sms']);
-                        echo "success"; exit;
-                    } else {
+            if ($data['form'] == 'home') {
+                $mail_sub1 = 'Painting Tool Home-Makeover Calculation ';
+                $mail_body1 = "<p>Hi Admin,</p>";
+                $mail_body1 .= "A new rough estimation by a customer. <br><br>";
+                $mail_body1 .= "Name: " . $others['name'] . "<br>Email: " . $others['email'] . " <br>Phone: " . $others['phone'] . "<br>";
+                $mail_body1 .= "<b>Total: " . $others['home-total'] . " </b><br>";
+                $mail_body1 .= "<table cellpadding='10' border='1' >";
+                $mail_body1 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
+                for ($i = "0"; $i < count($room_name); $i++) {
+                    $mail_body1 .= "<tr><td>" . $room_name[$i] . " </td><td>" . $plan_name[$i] . " </td><td>" . $price[$plan_name[$i]] . " </td></tr>";
+                }
+                $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>" . $others['home-total'] . " </b></td></tr>";
+                $mail_body1 .= "</table>";
+                $mail_body1 .= "<strong>Regards, </strong><br>";
+                $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+
+                $mail_sub2 = 'REQUEST FOR CALCULATION';
+                $mail_body2 = "<p>Hi " . $others['name'] . ",</p>";
+                $mail_body2 .= "Here you find the calculation for your requested plan.<br>Thank you. <br><br>";
+                $mail_body2 .= "<table cellpadding='10' border='1'>";
+                $mail_body2 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
+                for ($i = "0"; $i < count($room_name); $i++) {
+                    $mail_body2 .= "<tr><td>" . $room_name[$i] . " </td><td>" . $plan_name[$i] . " </td><td>" . $price[$plan_name[$i]] . " </td></tr>";
+                }
+                $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td><b>" . $others['home-total'] . "</b></td></tr>";
+                $mail_body2 .= "</table>";
+                $mail_body2 .= "<strong>Regards, </strong><br>";
+                $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+
+                $emailSend1 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo('banushree@arkinfotec.com')
+                        ->setSubject($mail_sub1)
+                        ->setHtmlBody($mail_body1)
+                        ->send();
+                $emailSend2 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo($others['email'])
+                        ->setSubject($mail_sub2)
+                        ->setHtmlBody($mail_body2)
+                        ->send();
+
+                if ($emailSend1 && $emailSend2) {
+                    // unset($session['Sms']);
+                    echo "success";
+                    exit;
+                } else {
 //                         Yii::$app->getSession()->setFlash('danger', 'Request not sent successfully');
-                            echo "error";exit;
-                    }
-              }
-            
+                    echo "error";
+                    exit;
+                }
+            }
         }
-        
-  
-        
+
+
+
         return $this->renderAjax('/pages/home-makeover-calculator', [
                     'model' => $model,
         ]);
     }
-    
-    
-    public function actionMailmegeneral(){
-     
+
+    public function actionMailmegeneral() {
+
         if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();  
-            echo '<pre>'; print_r($data); exit;
-            $appr_sqft = array();
-            $paint = array();
-            $room_name = array();
-            $others = array();
-            
-             foreach($data['data'] as $value){
-                 if(strpos($value['name'], 'room-name') !== false ){
-                       $room_name[] = $value['value'];
-                 }else if(strpos($value['name'], 'appr-sqft') !== false ){
-                     $paint[] = $value['value'];
-                 }else{
-                     $others[$value['name']] = $value['value'];
-                 }
-                 
-            }
-            $price = ["Hatchling Plan" => "3000", "Baby Plan" => "6000", "Transformation Plan"=>"10000"];
+            $data = Yii::$app->request->post();
 
-            $mail_body = '';
-            for($i = "0"; $i < count($room_name); $i++){
-                $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$paint[$i]." </td><th> Rate: </th><td> ".$price[$paint[$i]]." </td>";
-            }
-           
-              if($data['form'] == 'general'){
-                    $mail_sub1 = 'Painting Tool Home-Makeover Calculation ' ;
-                    $mail_body1 = "<p>Hi Admin,</p>";
-                    $mail_body1 .= "A new rough estimation by a customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$others['name']."<br>Email: ".$others['email']." <br>Phone: ".$others['phone']."<br>";
-                    $mail_body1 .=  "<b>Total: ".$others['home-total']." </b><br>";
-                    $mail_body1 .= "<table cellpadding='10' cellspacing='10'>";
-                    $mail_body1 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
-                    for($i = "0"; $i < count($room_name); $i++){
-                        $mail_body1 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
-                    }
-                    $mail_body1 .= "<tr><td colspan='2' align='center'><b>Total</b></td><td>".$others['home-total']." </b></td></tr>";
-                    $mail_body1 .= "</table>";
-                    $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
-                    
-                    $mail_sub2 = 'REQUEST FOR CALCULATION';
-                    $mail_body2 = "<p>Hi ".$others['name'].",</p>";
-                    $mail_body2 .= "Here you find the calculation for your requested plan.<br>Thank you. <br><br>";
-                    $mail_body2 .= "<table cellpadding='10' cellspacing='10'>";
-                    $mail_body2 .= "<tr><th>Room Name</th><th>Plan Name</th><th>Rate</th></tr>";
-                    for($i = "0"; $i < count($room_name); $i++){
-                        $mail_body2 .= "<tr><td>".$room_name[$i]." </td><td>".$plan_name[$i]." </td><td>".$price[$plan_name[$i]]." </td></tr>";
-                    }
-                    $mail_body2 .= "<tr><td colspan='2' align='center'><b>Total</td><td>".$others['home-total']."</b></td></tr>";
-                    $mail_body2 .= "</table>";
-                    $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
-                    
-                     $emailSend1 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo('banushree@arkinfotec.com')
-                            ->setSubject($mail_sub1)
-                            ->setHtmlBody($mail_body1)
-                            ->send();
-                   $emailSend2 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo($others['email'])
-                            ->setSubject($mail_sub2)
-                            ->setHtmlBody($mail_body2)
-                            ->send();
 
-                    if ($emailSend1 && $emailSend2) {
-                        echo "success"; exit;
-                    } else {
-                            echo "error";exit;
+            if ($data['general'] == 'general') {
+
+                $mail_sub1 = 'Painting Tool General-painting Calculation ';
+                $mail_body1 = "<p>Hi Admin,</p>";
+                $mail_body1 .= "A new rough estimation by a customer. <br><br>";
+                $mail_body1 .= "Name: " . $data['name'] . "<br>Email: " . $data['email'] . " <br>Phone: " . $data['phone'] . "<br><br>";
+                $mail_body1 .= "<table  cellpadding='10' border='1'>";
+                $mail_body1 .= "<tr><th>Paint type</th><th>Room Name</th><th>Paint</th><th>Approximate Sqft</th><th>Rate</th><th>Amount</th></tr>";
+                if (!empty($data['interior'])) {
+                     foreach ($data['interior'] as $item){ 
+                         if (array_key_exists("'radio1'", $item)) { 
+                             $mail_body1 .= "<tr><td colspan='6'><b>Interior</b></td></tr>";
+                             break;
+                         }
+                     }
+//                    if (isset($data['interior']['fresh']) || isset($data['interior']['repaint'])) {
+//                        $mail_body1 .= "<b>Interior</b>";
+//                    } else { }
+                    
+                    foreach ($data['interior'] as $value) {
+                        if (array_key_exists('fresh', $value)) {
+                            $type = $value['fresh'];
+                            $mail_body1 .= "<tr><td> " . $value["'radio1'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else if (array_key_exists('repaint', $value)) {
+                            $type = $value['repaint'];
+                            $mail_body1 .= "<tr><td> " . $value["'radio1'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else {
+
+                            $type = "-";
+                        }
                     }
-              }
-            
-            
-      }
+                }
+
+                if (!empty($data['exterior'])) {
+                     foreach ($data['exterior'] as $item){ 
+                         if (array_key_exists("'radio2'", $item)) { 
+                             $mail_body1 .= "<tr><td colspan='6'><b>Exterior</b></td></tr>";
+                             break;
+                         }
+                     }
+                     
+//                    if (isset($data['exterior']['fresh']) || isset($data['exterior']['repaint'])) {
+//                        $mail_body1 .= "<b>Exterior</b>";
+//                    } else { }
+                    
+                    foreach ($data['exterior'] as $value) {
+                        if (array_key_exists('fresh', $value)) {
+                            $type = $value['fresh'];
+                            $mail_body1 .= "<tr><td> " . $value["'radio2'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate2'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else if (array_key_exists('repaint', $value)) {
+                            $type = $value['repaint'];
+                            $mail_body1 .= "<tr><td> " . $value["'radio2'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate2'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else {
+                            $type = "-";
+                        }
+                    }
+                }
+                
+                $mail_body1 .= "<tr><td  colspan='5'><b>Total</b></td><td><b>".$data['general-total']."</b></td></tr>";
+                $mail_body1 .= "</table><br><br><strong>Regards, </strong><br>";
+                $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+
         
-        return $this->renderAjax('/pages/general-painting-calculator', [
-                    'model' => $model,
-        ]);
-    }
-    
+                                
+                $mail_sub2 = 'REQUEST FOR CALCULATION ';
+                $mail_body2 = "<p>Hi " . $data['name'] . "</p>";
+                $mail_body2 .= "Here you find the requested calculation. <br><br>";
+                $mail_body2 .= "Name: " . $data['name'] . "<br>Email: " . $data['email'] . " <br>Phone: " . $data['phone'] . "<br><br>";
+                $mail_body2 .= "<table cellpadding='10' border='1'>";
+                $mail_body2 .= "<tr><th>Paint type</th><th>Room Name</th><th>Paint</th><th>Approximate Sqft</th><th>Rate</th><th>Amount</th></tr>";         
+                 if (!empty($data['interior'])) {
+                     foreach ($data['interior'] as $item){ 
+                         if (array_key_exists("'radio1'", $item)) { 
+                             $mail_body2 .= "<tr><td colspan='6'><b>Interior</b></td></tr>";
+                             break;
+                         }
+                     }
+//                    if (in_array_r("'radio1'",$data['interior']) ) {
+//                       
+//                    } else { }
+                    
+                    foreach ($data['interior'] as $value) {
+                        if (array_key_exists('fresh', $value)) {
+                            $type = $value['fresh'];
+                            $mail_body2 .= "<tr><td> " . $value["'radio1'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else if (array_key_exists('repaint', $value)) {
+                            $type = $value['repaint'];
+                            $mail_body2 .= "<tr><td> " . $value["'radio1'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else {
 
-    
-  public function actionAjaxbookotp() {
+                            $type = "-";
+                        }
+                    }
+                }
+
+                if (!empty($data['exterior'])) {
+//                    print_r($data['exterior']);
+                    //exit;
+                    foreach ($data['exterior'] as $item){ 
+                         if (array_key_exists("'radio2'", $item)) { 
+                             $mail_body2 .= "<tr><td colspan='6'><b>Exterior</b></td></tr>";
+                             break;
+                         }
+                     }
+                     
+                    
+                    foreach ($data['exterior'] as $value) {
+                        if (array_key_exists('fresh', $value)) {
+                            $type = $value['fresh'];
+                            $mail_body2 .= "<tr><td> " . $value["'radio2'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate2'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else if (array_key_exists('repaint', $value)) {
+                            $type = $value['repaint'];
+                            $mail_body2 .= "<tr><td> " . $value["'radio2'"] . "</td><td>" . $value["'room-name1'"] . " </td><td> " . $type . "</td><td>" . $value["'appr-sqft1'"] . "</td><td>" . $value["'rate2'"] . "</td><td>" . $value["'amount'"] . "</td></tr>";
+                        } else {
+                            $type = "-";
+                        }
+                    }
+                }                
+                  
+                $mail_body2 .= "<tr><td  colspan='5'><b>Total</b></td><td><b>".$data['general-total']."</b></td></tr>";
+                $mail_body2 .= "</table><br><br><strong>Regards, </strong><br>";
+                $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+
+                $emailSend1 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo('banushree@arkinfotec.com')
+                        ->setSubject($mail_sub1)
+                        ->setHtmlBody($mail_body1)
+                        ->send();
+                $emailSend2 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo($data['email'])
+                        ->setSubject($mail_sub2)
+                        ->setHtmlBody($mail_body2)
+                        ->send();
+                if ($emailSend1 && $emailSend2) {
+                   $json=array();
+                    $json["mgs"] = "success";
+                    echo json_encode($json);
+                    exit;
+                } else {
+                    echo "error";
+                    exit;
+                }
+            }
+        }
+
+        return $this->renderAjax('/pages/general-painting-calculator');
+                   // 'model' => $model,
+//        ]);
+    }
+
+    public function actionAjaxbookotp() {
         if (Yii::$app->request->isAjax) {
             $session = Yii::$app->session;
             $json = array();
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
-              // $token = 'rGdiHxtdXw';
+                // $token = 'rGdiHxtdXw';
                 $token = 'ZVDzjxMguN';
                 $mobile = $data['req_val'];
                 $rndno = rand(1000, 9999);
@@ -371,7 +432,6 @@ class SiteController extends Controller
         exit;
     }
 
-
     public function actionBookotp() {
 
         $model = new Sms();
@@ -381,73 +441,113 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $post = Yii::$app->request->post();
             $username = $post['Sms']['name'];
-                    $email = $post['Sms']['email'];
-                    $message= $post['Sms']['mess'];
-                    $phone= $session['Sms']['phone'];
-                    $service= $post['Sms']['type_service'];
-                    
-                    $mail_sub1 = 'Painting Tool-Booking Appointment ' ;
-                    $mail_sub2 = 'REQUEST FOR AN APPOINTMENT';
-                    $mail_body1 = "<p>Hi Admin,</p>";
-                    $mail_body1 .= "A new appointment is booked from customer. <br><br>";
-                    $mail_body1 .=  "Name: ".$username."<br>Email: " .$email."<br>Phone: ".$phone."<br> Service: " .$service."<br> Message: " .$message."<br><br>";
-                    $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+            $email = $post['Sms']['email'];
+            $message = $post['Sms']['mess'];
+            $phone = $session['Sms']['phone'];
+            $service = $post['Sms']['type_service'];
 
-                    $mail_body2 = "<p>Hi " . $username . ",</p>";
-                    $mail_body2 .= "Thank you. We will contact you as soon as possible.<br><br>";
-                   // $mail_body2 .= $email."<br> " .$message;
-                    $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+            $mail_sub1 = 'Painting Tool-Booking Appointment ';
+            $mail_sub2 = 'REQUEST FOR AN APPOINTMENT';
+            $mail_body1 = "<p>Hi Admin,</p>";
+            $mail_body1 .= "A new appointment is booked from customer. <br><br>";
+            $mail_body1 .= "Name: " . $username . "<br>Email: " . $email . "<br>Phone: " . $phone . "<br> Service: " . $service . "<br> Message: " . $message . "<br><br>";
+            $mail_body1 .= "<strong>Regards, </strong><br>";
+            $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
 
-                     $emailSend1 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo('banushree@arkinfotec.com')
-                            ->setSubject($mail_sub1)
-                            ->setHtmlBody($mail_body1)
-                            ->send();
-                   $emailSend2 = Yii::$app->mailer->compose()
-                            ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo($email)
-                            ->setSubject($mail_sub2)
-                            ->setHtmlBody($mail_body2)
-                            ->send();
+            $mail_body2 = "<p>Hi " . $username . ",</p>";
+            $mail_body2 .= "Thank you. We will contact you as soon as possible.<br><br>";
+            // $mail_body2 .= $email."<br> " .$message;
+            $mail_body2 .= "<strong>Regards, </strong><br>";
+            $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
 
-                    if ($emailSend1 && $emailSend2) {
-                       // Yii::$app->getSession()->setFlash('success', 'Mail sent successfully');
-                        unset($session['Sms']);
-                        echo "success"; exit;
-                    } else {
-                        // return $this->redirect(['site/index']);
-                            echo "error";exit;
-                    }
-                  
+            $emailSend1 = Yii::$app->mailer->compose()
+                    ->setFrom(['sumanasdev@gmail.com'])
+                    ->setTo('banushree@arkinfotec.com')
+                    ->setSubject($mail_sub1)
+                    ->setHtmlBody($mail_body1)
+                    ->send();
+            $emailSend2 = Yii::$app->mailer->compose()
+                    ->setFrom(['sumanasdev@gmail.com'])
+                    ->setTo($email)
+                    ->setSubject($mail_sub2)
+                    ->setHtmlBody($mail_body2)
+                    ->send();
+
+            if ($emailSend1 && $emailSend2) {
+                // Yii::$app->getSession()->setFlash('success', 'Mail sent successfully');
+                unset($session['Sms']);
+                echo "success";
+                exit;
+            } else {
+                // return $this->redirect(['site/index']);
+                echo "error";
+                exit;
+            }
         }
 
         return $this->renderAjax('bookotp', [
                     'model' => $model,
                     'session_otp' => $session_otp,
         ]);
-    }    
+    }
 
-public function actionRequestquote(){
-     $model = new Sms();
-               echo "testing"; exit;
+    public function actionRequestquote() {
+        $model = new Sms();
+         if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+            //echo'<pre>'; print_r($data); exit;
+        
+            $na1 = $data['na1'];
+            $em1 = $data['em1'];
+            $ph1 = $data['ph1'];
+            $mes1 = $data['mes1'];
+            if ($data['form'] == 'quote') {
+                $mail_sub1 = 'Painting Tool-Request A Quote';
+                $mail_body1 = "<p>Hi Admin,</p>";
+                $mail_body1 .= "A new quote is generated. <br><br>";
+                $mail_body1 .= "Name: " . $na1 . "<br>Email: " . $em1 . " <br> Phone: " . $ph1 . "<br>Message: " . $mes1 . "<br><br>";
+                $mail_body1 .= "<strong>Regards, </strong><br>";
+                $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
 
-      if ($model->load(Yii::$app->request->post())) {
-          echo "test"; exit;
-      }
-    
-    return $this->render('index', [
+                $mail_sub2 = 'REQUEST A QUOTE';
+                $mail_body2 = "<p>Hi " . $na1 . ",</p>";
+                $mail_body2 .= "Your requested quote is created successfully!!. Thank you. <br><br>";
+                $mail_body2 .= "<strong>Regards, </strong><br>";
+                $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+
+                $emailSend1 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo('banushree@arkinfotec.com')
+                        ->setSubject($mail_sub1)
+                        ->setHtmlBody($mail_body1)
+                        ->send();
+                $emailSend2 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo($em1)
+                        ->setSubject($mail_sub2)
+                        ->setHtmlBody($mail_body2)
+                        ->send();
+
+                if ($emailSend1 && $emailSend2) {
+                   //$json=array();
+                   // $json["mgs"] = "success";
+                    //echo json_encode($json);
+                    echo "success";
+                    exit;
+                } else {
+                     echo "error";exit;
+                }
+            }
+        }
+
+
+
+       return $this->renderAjax('index', [
                     'model' => $model,
         ]);
-}
-   public function actionAjaxrequestquote(){
-       
-       if (Yii::$app->request->isAjax) {
-           
-           
-       } 
-   }
+    }
+        
+
+    
 
 }

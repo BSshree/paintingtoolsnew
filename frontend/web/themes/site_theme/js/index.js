@@ -101,6 +101,31 @@ $('#inner-gallery-carousel').owlCarousel({
 })
   
   
+  $('#conceptwall').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+	autoplay:true,
+	navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+	dots:false,
+	center:true,
+	 items:2,
+  
+    responsive:{
+        
+      0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2,
+        }  
+       
+    }
+})
+  
   
   $('#testimonials-carousel-inner').owlCarousel({
     loop:true,

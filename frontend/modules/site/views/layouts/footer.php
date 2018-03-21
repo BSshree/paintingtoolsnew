@@ -37,13 +37,13 @@ use yii\widgets\ActiveForm;
               <ul>
                 <li><a href="/gift-a-wall">Gift a wall</a></li>
                 <li><a href="/general-painting">General Painting</a></li>
-                <li><a href="#">Designer Walls</a></li>
-                <li><a href="#">Wallpapers</a></li>
+                <li><a href="/designer-walls">Designer Walls</a></li>
+                <li><a href="/wallpapers">Wallpapers</a></li>
                 <li><a href="/royale-play">Royale Play</a></li>
                 <li><a href="/home-makeover">Home Makeovers</a></li>
-                <li><a href="#">Potraits </a></li>
-                <li><a href="#">Statues </a></li>
-                <li><a href="#">Metal Murals</a></li>
+                <li><a href="/potraits-statues-murals">Potraits </a></li>
+                <li><a href="/potraits-statues-murals">Statues </a></li>
+                <li><a href="/potraits-statues-murals">Metal Murals</a></li>
               </ul>
             </div>
             <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4 footer-part1">
@@ -60,7 +60,7 @@ use yii\widgets\ActiveForm;
     </div>
   </div>
   <div class="footer-row2">
-    <div class="container"> Copyright  © 2018 walldressup.com.  All Rights Reserved . Developed by Sumanas Technologies | Website development company in India.</div>
+    <div class="container"> Copyright  © 2018 walldressup.com.  All Rights Reserved. Developed by Sumanas Technologies | Website development company in India.</div>
     <input type='hidden' name='slug-name' id='slug-id'>
   </div>
 </footer>
@@ -77,6 +77,7 @@ use yii\widgets\ActiveForm;
 ?>
 <?php
 $sendotp = Yii::$app->getUrlManager()->createUrl("site/site/ajaxbookotp");
+$requestquote = Yii::$app->getUrlManager()->createUrl("site/site/requestquote");
 //echo '<pre>';print_r($sendotp); exit;   
 $script = <<< JS
 
@@ -142,22 +143,68 @@ $script = <<< JS
         var url = $(location).attr("href"),
             parts = url.split("/"),
             last_part = parts[parts.length-1];
-        //var names = ['General painting', 'gift-a-wall', 'concept-walls', 'designer-walls', 'wall-paper', 'royale-play', 'home-makeover', 'Potraits/Metal murals/Statues'];
+       
        
         if(last_part ){
         if( last_part=='royale-play-calculator'){
         last_part ="Royale play";
             }
+
+     if( last_part=='potraits-statues-murals'){
+        
+        $("#Bookanotp").on('shown.bs.modal', function (e) {
+        var id = $(e.relatedTarget).data('pot');
+        console.log(id);
+         });
+
+        
+      // var potr = $('#metal-book').val();
+        //var sta = $('#statue-book').data('pot')
+        //var met = $('#metal-book').data('pot')
+        //var potr = $(this).attr("data-id")
+        //alert(potr);
+        //alert(sta);
+        //alert(met);
+        
+
+//        if($('#metal-book').val() != ''){
+//        var potr = $('#metal-book').val();
+//        }
+//            else if($('#statue-book').val() != ''){
+//        var potr = $('#statue-book').val();
+//        }
+//            else if($('#potrait-book').val() != ''){
+//        var potr = $('#potrait-book').val();
+//        }
+        
+        
+       //if(potr == 'Metal murals'){
+        //last_part =potr;
+       // }
+//         $( "#metal-book" ).click(function(){
+//        alert('ji');
+//                 last_part ="Potraits";
+//        
+//              });
+        
+//        if(potr){
+//         last_part ="Potraits";
+//        }
+//         if(sta){
+//         last_part ="Statues";
+//        }
+//         if(met){
+//         last_part ="Metal murals";
+//        }
+    }
+        
+        
         if( last_part=='home-makeover-calculator'){
         last_part ="Home makeover";
             }
         if( last_part=='general-painting-calculator'){
         last_part ="General painting";
             }
-//         $("#book1").click(function(){  
-//        alert('bol');
-//        last_part ="Gift a wall";
-//            });
 
         //alert(last_part);
         var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);
@@ -166,12 +213,7 @@ $script = <<< JS
               //  alert(res_str);
             $("#sms-type_service").val(res_str);
         }
-//        if (jQuery.inArray(name, names)!='-1') {
-//            alert(name + ' is in the array!');
-//        } else {
-//            alert(name + ' is NOT in the array...');
-//        }
-        
+
         $.ajax({
                 url  : '{$sendotp}',
                 type : 'POST',                   
@@ -263,8 +305,79 @@ $script = <<< JS
                 
                 
                 
-}); 
+     
+    $("#requestaquote").validate({
+        rules: {
+              'name': {
+                required: true,
+//		minlength:3
+		},
+		'phone': {
+		required:true,
+		number:true,
+		},
+		'email': {
+                required: true,
+                email: true
+                 },
+                'mess': {
+                required: true,
+		},
+           },
+        messages: {
+                'name': {
+		required :"Please Enter Your Name",
+		},
+		'phone':{
+		required: "Please Enter Your Phone Number",
+		number: "Please Enter Valid Phone Number"
+		},
+                'email': "Please Enter a Valid Email Address",
+                 'mess': {
+		required :"Please Enter Your Message",
+		},
+            },
+                
+              submitHandler: function(form) {
        
+                var na = $('#req-name').val();
+                var em = $('#req-email').val();
+                var ph = $('#req-phone').val();
+                var mes = $('#req-mess').val();
+            
+            $(".request-show").show();   
+                
+            $.ajax({
+       
+                type: 'POST',
+                url: '{$requestquote}',
+                data:{
+                    na1:na, em1:em, ph1:ph, mes1:mes,
+                    form: 'quote',
+                     },
+                success: function(data) {
+                if(data == "success"){
+                 $("#successrequest").html( 'Your request has been send sucessfully!!' );
+                  setTimeout(function(){  $("#successrequest").hide("slow"); $("#successrequest").html("");
+                   $(".request-show").hide(); }, 5000);
+                  $('#requestaquote')[0].reset(); 
+                  $(".loading-image").hide(); 
+                }
+                
+                },
+            });
+
+           }     
+                
+                
+               
+    });
+   
+   
+   });
+                
+                
+                
 JS;
 $this->registerJs($script, View::POS_END);
 ?>
