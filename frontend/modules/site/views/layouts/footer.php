@@ -82,7 +82,13 @@ $requestquote = Yii::$app->getUrlManager()->createUrl("site/site/requestquote");
 $script = <<< JS
 
  $(document).ready(function () {
-        
+     
+    $("#Bookanotp").on('shown.bs.modal', function (e) {
+        var servicename = $(e.relatedTarget).data('servicename');
+        if(servicename){
+            console.log(servicename);
+        }        
+     }); 
 
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
@@ -152,10 +158,7 @@ $script = <<< JS
 
      if( last_part=='potraits-statues-murals'){
         
-        $("#Bookanotp").on('shown.bs.modal', function (e) {
-        var id = $(e.relatedTarget).data('pot');
-        console.log(id);
-         });
+       
 
         
       // var potr = $('#metal-book').val();

@@ -28,7 +28,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-lg-6 col-xl-6 portrait-txt">
         <p> In lobortis eu felis vitae blandit. Maecenas bibendum, ex non finibus ultricies, purus augue cursus urna, eget suscipit ante ligula non erat. Nunc convallis eget justo pulvinar aliquet. Vestibulum nibh dolor, congue in massa sed, tempor consequat dolor. Phasellus malesuada non urna et posuere. Vivamus lobortis facilisis hendrerit. Sed dignissim sapien eu tempus accumsan. Aliquam congue, risus eget placerat viverra, mauris leo dictum neque, non gravida massa quam quis dui. Nulla et scelerisque lacus, blandit congue arcu. Sed feugiat ac orci id viverra. Morbi vel commodo justo. Fusce luctus, arcu aliquam auctor pretium, ante felis vulputate sapien, eu cursus nisi lectus eget mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc aliquam lectus iaculis elementum gravida.</p> 
         
-        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="potrait-book" data-pot="Potraits" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
+        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="potrait-book" data-servicename="Potraits" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
         <!--<button type="button" class="btn btn1 btn1-1 btn1-2 bookapp-pot" id="id1" data-value="Potraits" data-toggle="modal" data-target="#Bookanotp">Book Now !</button>-->
     
         
@@ -49,7 +49,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-lg-6 col-xl-6 portrait-txt">
         <p> In lobortis eu felis vitae blandit. Maecenas bibendum, ex non finibus ultricies, purus augue cursus urna, eget suscipit ante ligula non erat. Nunc convallis eget justo pulvinar aliquet. Vestibulum nibh dolor, congue in massa sed, tempor consequat dolor. Phasellus malesuada non urna et posuere. Vivamus lobortis facilisis hendrerit. Sed dignissim sapien eu tempus accumsan. Aliquam congue, risus eget placerat viverra, mauris leo dictum neque, non gravida massa quam quis dui. Nulla et scelerisque lacus, blandit congue arcu. Sed feugiat ac orci id viverra. Morbi vel commodo justo. Fusce luctus, arcu aliquam auctor pretium, ante felis vulputate sapien, eu cursus nisi lectus eget mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc aliquam lectus iaculis elementum gravida.</p> 
-        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="statue-book" data-pot="Statues" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
+        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="statue-book" data-servicename="Statues" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
         <!--<button type="button" class="btn btn1 btn1-1 btn1-2 bookapp-pot" id="id2" data-value="Statues" data-toggle="modal" data-target="#Bookanotp">Book Now !</button>-->
         
       </div>
@@ -68,7 +68,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-lg-6 col-xl-6 portrait-txt findcls">
         <p> In lobortis eu felis vitae blandit. Maecenas bibendum, ex non finibus ultricies, purus augue cursus urna, eget suscipit ante ligula non erat. Nunc convallis eget justo pulvinar aliquet. Vestibulum nibh dolor, congue in massa sed, tempor consequat dolor. Phasellus malesuada non urna et posuere. Vivamus lobortis facilisis hendrerit. Sed dignissim sapien eu tempus accumsan. Aliquam congue, risus eget placerat viverra, mauris leo dictum neque, non gravida massa quam quis dui. Nulla et scelerisque lacus, blandit congue arcu. Sed feugiat ac orci id viverra. Morbi vel commodo justo. Fusce luctus, arcu aliquam auctor pretium, ante felis vulputate sapien, eu cursus nisi lectus eget mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc aliquam lectus iaculis elementum gravida.</p> 
-        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="metal-book" data-pot="Metal murals" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
+        <p> <a href="#" class="btn btn1 btn1-1 btn1-2 bookapp" id="metal-book" data-servicename="Metal murals" data-toggle="modal" data-target="#Bookanotp"> Book Now ! </a> </p>
             <!--<button type="button" class="btn btn1 btn1-1 btn1-2 bookapp-pot" id="id3" data-value="Metal murals" data-toggle="modal" data-target="#Bookanotp" >Book Now !</button>-->
         
       </div>
