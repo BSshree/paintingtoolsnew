@@ -22,7 +22,8 @@ class AppAssetPaint extends AssetBundle {
         'css/owl.carousel.min.css',
         'css/owl.theme.default.min.css',
         'css/popup.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css'
+        'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css',
+        'css/custom.css'
        
        
     ];
@@ -38,7 +39,8 @@ class AppAssetPaint extends AssetBundle {
         'js/index.js',
         'js/jquery.validate.js',
         'js/lodash.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js'
+        'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js',
+        'https://www.google.com/recaptcha/api.js',
        //  'js/main.js',
     ];
     public $depends = [

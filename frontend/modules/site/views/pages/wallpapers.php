@@ -1,3 +1,14 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\web\View;
+use yii\widgets\DetailView;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
+
+$this->title ='Wall Dressup - Wallpapers';
+?>
 <section class="slider-cont inner-page-heading">
   <div class="container">
     <h1>Designers Wall</h1>

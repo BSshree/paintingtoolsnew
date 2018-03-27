@@ -33,7 +33,7 @@ class Faq extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['question','answer','phone'], 'required'],
+            [['question','answer'], 'required'],
             [['question', 'answer'], 'string'],
             [['created_at', 'updated_at'], 'integer'],
         ];

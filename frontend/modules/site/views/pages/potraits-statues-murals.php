@@ -14,7 +14,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
   <div class="container">
     <div class="row">
     
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="1">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="potrait" >
         <h2> Portrait </h2>
         <span> Suspendisse iaculis ante quis</span> 
         
@@ -35,7 +35,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
       </div>
       
           
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="1">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="statue"  >
         <h2> Statues  </h2>
         <span> Suspendisse iaculis ante quis</span> 
         
@@ -54,7 +54,7 @@ $this->title ='Wall Dressup - Potraits/Metal murals/Statues';
       </div>
       
       
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="1">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 heading1" id="mural" >
         <h2>Metal Murals   </h2>
         <span> Suspendisse iaculis ante quis</span> 
         

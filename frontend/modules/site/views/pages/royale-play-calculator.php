@@ -19,7 +19,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
 
     <div class="container"> 
         <div>
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <!--<div class="modal-dialog modal-lg modal-dialog-centered" role="document">-->
                   <div class="modal-content ">
                     <div class="pricingcalcroyalplay modal-header " >
                         <h5 class="modal-title" id="exampleModalLongTitle">Royal Play Painting Calculator</h5>
@@ -118,9 +118,9 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                         <!--            <label>  Metallic  </label>
                                                      <input name="" type="radio" class="form-control" value="70">70-->
                                         <div class="radio" >
-                                            &nbsp;&nbsp;&nbsp; <label><input id="radio-nonmet" type="radio" value="val-nonmet" name="radio">Rs.<span id="nonmetallic"></span><br>Non-Metallic</label>
-                                            &nbsp;&nbsp;&nbsp; <label><input id="radio-met"  type="radio" value="val-met" name="radio">Rs.<span id="metallic"></span><br>Metallic</label>
-
+                                            &nbsp;&nbsp;&nbsp; <label><input id="radio-nonmet" type="radio" value="val-nonmet" name="radio"> ₹ <span id="nonmetallic"> </span><span> (Non-Metallic)</span></label>
+                                            &nbsp;&nbsp;&nbsp; <label><input id="radio-met"  type="radio" value="val-met" name="radio"> ₹ <span id="metallic"> </span><span> (Metallic)</span></label>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -128,9 +128,9 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                             <div class="form-group ">
                                 <div class="row mb-4">
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                        <label>  Rate Per SqFt  </label>
+                                        <label>  Rate Per SqFt (in Rs.)  </label>
                                         <input name="rate" type="text" class="form-control" id="met" readonly>
-                                        <!--<div class="form-control disabledbutton" id="met"></div>-->
+                                        <!--<div class="form-control disabledbutton" id="met"> <span class="rup" style="">₹ </span></div>-->
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +169,56 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div>
                             </div>-->
-                            <div class="modal fade bd-example-modal-lg pricingcalc2" id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+
+   <div class="modal fade bd-example-modal-lg pricingcalc2"id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Mail me</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--<form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">-->
+                                                <div class="form-group">
+                                                    <label class="control-label1">Full Name</label>
+                                                    <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label1">Email Address</label>
+                                                    <input  type="text" id="email" name="email"  class="form-control" placeholder="Enter Your Email Address" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label1">Phone</label>
+                                                    <input  type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                               <div class="form-group">
+                                                        <div class="g-recaptcha" data-sitekey="6LdCZU4UAAAAAFo-L00-OjH_qF-0J_I67y_5LpUC"></div>
+                                                        <!--<input class="form-control d-none" name="recapt" data-recaptcha="true" required data-error="Please complete the Captcha">-->
+                                                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                               <div class="modal-footer text-center">
+                                                    <div class="row mb-4">
+                                                        <div class="col-3 ">
+                                                            <input type="submit" name="submit" class="button btn btn1 " id="final-mailme-home1" value="Send">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group mailme-show" style="display:none">
+                                                    <div class="form-group" id="successMessage"> </div>
+                                                    <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+<!--                            <div class="modal fade bd-example-modal-lg pricingcalc2" id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog  modal-sm modal-dialog-centered" role="document">
                                         <div class="modal-content2">
                                             <div class="modal-header">
@@ -177,7 +226,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                                 <button type="button" class="close" data-dismiss="modal"   aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                             </div>
                                             <div class="modal-body">
-                                                <!--<form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">-->
+                                                <form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">
                                                     <div class="form-group">
                                                         <label class="control-label1">Full Name</label>
                                                         <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
@@ -190,7 +239,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label1">Phone</label>
-                                                        <input  type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
+                                                        <input  type="text" id="phone_num" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
                                                         <div class="errorMessage"></div>
                                                     </div>
                                                     <div class="form-group center-block ">
@@ -202,25 +251,25 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                                     </div>
 
                                                     <div class="form-group mailme-show" style="display:none">
-                                                        <!--<div class="row mb-4">-->
-                                                            <!--<div class="col-3">-->
+                                                        <div class="row mb-4">
+                                                            <div class="col-3">
                                                                 <div class="form-group " >
                                                                   <p id="successMessage"> </p>  
                                                                 </div>
                                                                 <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
-                                                            <!--</div>-->
-                                                        <!--</div>-->
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                <!--</form>-->
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             
                             <div class="form-group ">
                                 <div class="row mb-4">
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right total1">
-                                        Total :  <span class="badge badge-secondary" id="total-amount"></span>
+                                        Total : <span style="display:none" class="rupees">  ₹</span> <span class="badge badge-secondary" id="total-amount"></span>
                                      <input type="hidden" class="royal-total" name="royal-total" id="total-price" value="0">
                                     </div>
                                 </div></div>
@@ -233,7 +282,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                         </form>
                     </div>
                 </div>
-            </div>
+            <!--</div>-->
         </div>
     </div>
 </section>
@@ -265,6 +314,7 @@ $script = <<< JS
                 else{
                     $("#met").val(nonmel);
                     var total_value = ($('#w-height').val()) * ($('#w-width').val()) * nonmel;
+                     $('.rupees').show();
                     $('#total-amount').html(total_value);
                     $("#metal").hide();
                    }
@@ -274,7 +324,9 @@ $script = <<< JS
       if(  $('#radio-nonmet').attr('checked', true)){
                     $("#met").val(nonmel);
                     var total_value = ($('#w-height').val()) * ($('#w-width').val()) * nonmel;
+                    $('.rupees').show();
                     $('#total-amount').html(total_value);
+
                                }
                         });
         
@@ -283,6 +335,7 @@ $script = <<< JS
          if(  $('#radio-met').attr('checked', true)){
                     $("#met").val(mel);
                     var total_value = ($('#w-height').val()) * ($('#w-width').val()) * mel;
+                    $('.rupees').show();
                     $('#total-amount').html(total_value);
 
                            }
@@ -297,8 +350,8 @@ $script = <<< JS
                  var wid = $('#w-width').val();
                  $('#met').val(bla);
                  var total_value = dInput * wid * bla;
+                $('.rupees').show();
                  $('#total-amount').html(total_value);
-        
               });
         
          $( "#w-width" ).keyup(function() {
@@ -307,6 +360,7 @@ $script = <<< JS
                  var heig = $('#w-height').val();
                  $('#met').val(bla);
                  var total_value = dInput * heig * bla;
+                 $('.rupees').show();
                  $('#total-amount').html(total_value);
         
               });
@@ -321,6 +375,7 @@ $script = <<< JS
                    
 
          $("#royalplay-validate").validate({
+          ignore: ".ignore",
         rules: {
               'wall-height': {
                 required: true,
@@ -344,46 +399,46 @@ $script = <<< JS
                 'royal-design':{
                     required:true,
                 },
-                'radio':{
-                    required: true,
-                }
+//                'radio':{
+//                    required: true,
+//                }
            },
         messages: {
                 'name': {
-		required :"Full Name",
+		required :"Enter Full Name",
 		},
 		'wall-height':{
-		required: "Height",
-		number: "Height"
+		required: "Invalid Height",
+		number: "Invalid Height"
 		},
                 'wall-width':{
-		required: "Width",
-		number: "Width"
+		required: "Invalid Width",
+		number: "Invalid Width"
 		},
-                'email': "Email Address",
+                'email': "Invalid Email Address",
                  'royal-design': {
 		required :"Select Design",
 		},
                 'phone': {
-                    required :"Phone  Number",
+                    required :"Invalid Phone Number",
                     },
-                'radio':{
-                    required:"Select Option"
-                },
+//                'radio':{
+//                    required:"Select Option"
+//                },
                
             },
              
-                errorPlacement: function(error, element) 
-           {
-            if ( element.is(":radio") ) 
-            {
-                error.appendTo( element.parents('.container') );
-            }
-            else 
-            { // This is the default behavior 
-                error.insertAfter( element );
-            }
-         },
+//                errorPlacement: function(error, element) 
+//           {
+//            if ( element.is(":radio") ) 
+//            {
+//                error.appendTo( element.parents('.container') );
+//            }
+//            else 
+//            { // This is the default behavior 
+//                error.insertAfter( element );
+//            }
+//         },
    
           submitHandler: function(form) {
        
@@ -394,7 +449,7 @@ $script = <<< JS
                 var r1 = $('#met').val();
                 var n1 = $('#name').val();
                 var e1 = $('#email').val();
-                var p1 = $('#phone').val();
+                var p1 = $('#phone_num').val();
             
              $(".mailme-show").show();   
                 
@@ -413,10 +468,12 @@ $script = <<< JS
                   setTimeout(function(){  $("#successMessage").hide("slow"); $("#successMessage").html("");
                   $('#mailmepopup').modal('hide'); }, 5000);
                   $('#royalplay-validate')[0].reset(); 
+                 $("#metal").hide();
                   $(".loading-image").hide(); 
                   $('#radio-met').prop('checked', false);
                   $('#radio-nonmet').prop('checked', false);
                   $('#total-amount').text('');
+                  setTimeout(function() { location.reload();  }, 2000);
                 }
                 
                 },

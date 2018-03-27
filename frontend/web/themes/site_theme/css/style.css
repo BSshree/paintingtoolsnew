@@ -1184,8 +1184,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding:0px;
 }
 .pricingcalc1 #accordion .custom-radio {
-	width: 19px;
-	margin: 0px auto;
+	/*width: 19px;*/
+	/*margin: 0px auto;*/
 }
 .pricingcalc1 #accordion .card {
 	margin-bottom:20px;
@@ -1210,35 +1210,21 @@ h1, h2, h3, h4, h5, h6 {
 .btn2 {
 	background:#0594d2;
 	color:#ffffff;
-       
-}
-.btn3 {
-	background:#0594d2;
-	color:#ffffff;
-         height:200px;
-    width:200px;
 }
 .partners-page-cont {
 }
-
-
-.royal-play-cont
-{
+.royal-play-cont {
 	width:100%;
 	float:left;
 	padding:60px 0px
 }
-
-.royalplay-thumb
-{
+.royalplay-thumb {
 	margin-top:30px;
 }
-
 .royalplay-thumb .gp-txt1 h2 {
 	font-size: 25px;
 	line-height: 26px;
 }
-
 .royalplay-thumb .gp-txt1 {
 	width: 100%;
 	float: left;
@@ -1247,42 +1233,31 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 22px;
 	line-height: 28px;
 }
-
 .royalplay-price {
 	font-size: 30px;
 	font-weight: 600;
 	color: #444444;
 }
-
-.royalplay-price span
-{
+.royalplay-price span {
 	font-weight:400;
 	font-size:18px;
 	color:#555555;
 }
-
 .royalplay-thumb .general-painting-service1 {
 	-webkit-box-shadow: 7px 7px 8px 0px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow:    7px 7px 8px 0px rgba(0, 0, 0, 0.2);
 	box-shadow:         7px 7px 8px 0px rgba(0, 0, 0, 0.2);
 }
-
-
 .royalplay-gallery-cont {
 	background:url(../images/gallery-bg2.jpg) no-repeat;
 	background-size:cover;
 }
-
-
-.homemake-over
-{
+.homemake-over {
 	width:100%;
 	float:left;
 	padding:60px 0px;
 }
-
-.make-overthumb-cont
-{
+.make-overthumb-cont {
 	width:100%;
 	float:left;
 	text-align: center;
@@ -1296,12 +1271,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0px 0px 0px 0px;
 	background: #ffffff;
 	margin-top: 30px;
-	
 }
-
-
-.make-overt-paln-heading
-{
+.make-overt-paln-heading {
 	width:100%;
 	float:left;
 	background:#696969;
@@ -1311,7 +1282,6 @@ h1, h2, h3, h4, h5, h6 {
 	text-align:center;
 	font-family: 'Poppins', sans-serif;
 	border:#ffffff dashed 2px;
-	
 }
 
 
@@ -1372,36 +1342,23 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom:25px !important;
 	padding-bottom:25px;
 }
-
-.make-over-thumb-img
-{
+.make-over-thumb-img {
 	width:100%;
 	float:left;
 	border-bottom:#BDBDBD solid 5px;
 }
-.plan-hold{
-    font-weight:600;
-	font-size:18px;
-}
-
-royalplay-thumb .royalplay-price
-{
+royalplay-thumb .royalplay-price {
 	width:100%;
 	float:left;
 }
-
-.metalic
-{
+.metalic {
 	width:50%;
 	float:left;
 	padding:0px 10px;
 	border:none;
 	line-height:22px;
-
 }
-
-.n-metalic
-{
+.n-metalic {
 	width:50%;
 	float:left;
 	padding:0px 10px;
@@ -1566,6 +1523,3 @@ font-size:20px;
 {
 	background:#40aeef;
 }
-/*.modal-text p {
-    word-wrap: break-word;
-}*/

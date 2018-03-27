@@ -18,8 +18,8 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
 
 
     <div class="container"> 
-        <div>
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <!--<div>-->
+            <!--<div class="modal-dialog modal-lg modal-dialog-centered" role="document">-->
                 <div class="modal-content">
                     <div class="pricingcalcroyalplay modal-header ">
                         <h5 class="modal-title" id="exampleModalLongTitle">Home Make over Calculator</h5>
@@ -28,20 +28,19 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                     <form id="home-makeover-validate"  name="home-makeover" class="home-makeover-validate" method="post" action="">
                         <div class="modal-body">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                               
+
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="myTable">
                                         <thead>
                                             <tr>
-                                                <th></th>
                                                 <th scope="col">Room Name</th>
                                                 <th scope="col">Plan Name</th>
-                                                <th scope="col" class="home-price">Rate</th>
+                                                <th scope="col" class="home-price">Rate (in Rs.)</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody class="tbody" id="tbody">
                                             <tr class="show-row">
-                                                <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
                                                 <td><input name="room-name[0]" type="text" class="form-control room-name"></td>
                                                 <td><select class="custom-select home-makeover-select plan-name" name="plan-name[0]" >
                                                         <option selected value="" data-price="0">Select</option>
@@ -50,13 +49,14 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                                                         <option value="Transformation Plan" data-price="10000">Transformation Plan</option>
                                                     </select></td>
                                                 <td class="text-center row-rate home-rate"><b> </b></td>
+                                                <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
                                             </tr>
 
                                         </tbody>
                                     </table>
-                                     <div class="form-group pull-right">   
-                                    <button type="button" class="btn btn-dark add-row-button" id="add-row-button"><i class="fas fa-plus "> </i> Add Row</button>
-                                </div>
+                                    <div class="form-group pull-right">   
+                                        <button type="button" class="btn btn-dark add-row-button" id="add-row-button"><i class="fas fa-plus "> </i> Add Row</button>
+                                    </div>
                                 </div>
                                 <!--                                <div class="" id="mailme-show" style="display:none">
                                                                     <div class="form-group ">
@@ -83,55 +83,56 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                                                                    
                                                                 </div>-->
 
-
-                                <div class="modal fade bd-example-modal-lg pricingcalc2" id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                    <div class="modal-dialog  modal-sm modal-dialog-centered" role="document">
-                                        <div class="modal-content2">
+                                <div class="modal fade bd-example-modal-lg pricingcalc2"id="mailmepopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm" role="document">
+                                        <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLongTitle">Mail me</h5>
-                                                <button type="button" class="close" data-dismiss="modal"   aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                             </div>
                                             <div class="modal-body">
                                                 <!--<form id="royal-mailme-popup" name="royal-mailme-popup"  method="post" actio="">-->
-                                                    <div class="form-group">
-                                                        <label class="control-label1">Full Name</label>
-                                                        <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
-                                                        <div class="errorMessage"></div>
+                                                <div class="form-group">
+                                                    <label class="control-label1">Full Name</label>
+                                                    <input  type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label1">Email Address</label>
+                                                    <input  type="text" id="email" name="email"  class="form-control" placeholder="Enter Your Email Address" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label1">Phone</label>
+                                                    <input  type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
+                                                    <div class="errorMessage"></div>
+                                                </div>
+                                               <div class="form-group">
+                                                        <div class="g-recaptcha" data-sitekey="6LdCZU4UAAAAAFo-L00-OjH_qF-0J_I67y_5LpUC"></div>
+                                                        <!--<input class="form-control d-none" name="recapt" data-recaptcha="true" required data-error="Please complete the Captcha">-->
+                                                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                                        <div class="help-block with-errors"></div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label1">Email address</label>
-                                                        <input  type="text" id="email" name="email"  class="form-control" placeholder="Enter Your Email Address" />
-                                                        <div class="errorMessage"></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label1">Phone</label>
-                                                        <input  type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number" />
-                                                        <div class="errorMessage"></div>
-                                                    </div>
-                                                    <div class="form-group center-block ">
-                                                        <div class="row mb-4">
-                                                            <div class="col-3 ">
-                                                                <input type="submit" name="submit" class="button btn btn1 " id="final-mailme-home1" value="Send">
-                                                            </div>
+                                                <div class="modal-footer text-center">
+                                                    <div class="row mb-4">
+                                                        <div class="col-3 ">
+                                                            <input type="submit" name="submit" class="button btn btn1 " id="final-mailme-home1" value="Send">
                                                         </div>
                                                     </div>
+                                                </div>
 
-                                                    <div class="form-group mailme-show" style="display:none">
-                                                        <!--<div class="row mb-4">-->
-                                                            <!--<div class="col-3">-->
-                                                                <div class="form-group" id="successMessage"> </div>
-                                                                <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
-                                                            <!--</div>-->
-                                                        <!--</div>-->
-                                                    </div>
-                                                <!--</form>-->
+                                                <div class="form-group mailme-show" style="display:none">
+                                                    <div class="form-group" id="successMessage"> </div>
+                                                    <div class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""> </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                         
+                                
                                 <div class="form-group"> 
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right total1 "> Total : <span class="badge badge-secondary home-total"></span> </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right total1 "> Total : <span style="display:none" class="rupees">  ₹ </span><span class="badge badge-secondary home-total"></span> </div>
                                     <input type="hidden" class="home-total" name="home-total" id="total-price" value="0">
                                 </div>
                             </div>
@@ -144,17 +145,16 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
     </div>
-</div>
+<!--</div>-->
 </section>
 
 
 
 <script type="text/html" id="form_tpl">
     <tr class="show-row">
-        <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
         <td><input name="room-name[<%= element.i %>]" type="text" class="form-control room-name"></td>
         <td><select class="custom-select home-makeover-select plan-name" name="plan-name[<%= element.i %>]" >
                 <option selected value="" data-price="0">Select</option>
@@ -163,6 +163,7 @@ $this->title = 'Wall Dressup - Home-makeover-Calculator';
                 <option value="Transformation Plan" data-price="10000">Transformation Plan</option>
             </select></td>
         <td class="text-center row-rate home-rate"><b> </b></td>
+        <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
     </tr>
 </script>
 <?php
@@ -216,7 +217,8 @@ $script = <<< JS
         }
         $('body').on('change','.home-makeover-select',function(){
             var _planprice = $(this).find(':selected').data('price');            
-            $(this).closest('.show-row').find('.home-rate b').text(_planprice);
+            $(this).closest('.show-row').find('.home-rate b').text('₹'+_planprice);
+            $('.rupees').show();
            home_amount(); 
             
             
@@ -234,6 +236,7 @@ $script = <<< JS
         });
 
         $("#home-makeover-validate").validate({
+          ignore: ".ignore",
             rules: {
                     'email': {
                     required: true,
@@ -256,18 +259,18 @@ $script = <<< JS
                },
             messages: {
                     'name': {
-                    required :"Full Name",
+                    required :"Enter Full Name",
                     },
                     'phone': {
-                    required :"Phone Number",
+                    required :"Invalid Phone Number",
                     },
                    'email': {
-                    required :"Email Address",
+                    required :"Invalid Email Address",
                     },
                     'room-name[0]':{
                     required: "Room Name",
                     },
-                    'email': "Email Address",
+                    //'email': "Email Address",
 
                 },
 
@@ -301,7 +304,8 @@ $script = <<< JS
                     $("#total-price").val('');
                     $(".home-total").text('');
                     $('#mailme-show').hide();
-                    $(".loading-image").hide(); 
+                    $(".loading-image").hide();
+                      setTimeout(function() { location.reload();  }, 2000);
                     }
 
                     }

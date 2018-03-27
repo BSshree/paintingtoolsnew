@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-    <p>      <?= Html::button('Book An Appointment', ['value'=>Url::to('bookotp'),'class' => 'btn btn-success','id' =>'modalButton']) ?> </p>
+    <p>      <?php // Html::button('Book An Appointment', ['value'=>Url::to('bookotp'),'class' => 'btn btn-success','id' =>'modalButton']) ?> </p>
  <?php
     Modal::begin([
         'header' =>'<h4>Book An Appointment</h4>',

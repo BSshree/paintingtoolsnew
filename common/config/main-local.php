@@ -3,7 +3,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=paintingtool', //rajencba_paintings
+            'dsn' => 'mysql:host=127.0.0.1;dbname=painting_tool', //rajencba_paintings
             'username' => 'root', //rajencba_paint
             'password' => '', //uC}},n)Ke2wc
             'charset' => 'utf8',

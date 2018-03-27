@@ -14,8 +14,13 @@ use yii\bootstrap\Modal;
                <!--<a href="#" data-toggle="modal" data-target="#exampleModalCenter">--> 
             <?php // Html::button('Book An Appointment', ['value'=>Url::to('/bookotp'),'class' => 'btn contact-btn1 modalButton', 'data-toggle'=>'modal', 'data-target'=>'#exampleModalCenter']) ?>
                  <!--</a>-->              
-            <a href="#" class="btn contact-btn1" data-toggle="modal" data-target="#Bookanotp"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> Book An Appointment </a> 
-            <a href="#" class="btn contact-btn1 contact-btn2"><i class="fas fa-map-marker-alt"></i> Operational In </a></div>
+            <a href="#" class="btn contact-btn1" data-toggle="modal" data-target="#Bookanotp"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> Book An Appointment </a>     
+                <a href="" class="btn contact-btn1 contact-btn2 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i> Operational In </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Madurai</a>
+                  <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Coimbatore</a>
+                </div>
+            </div>
           <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> (364) 106-7572 </div>
         </div>
       </div>
@@ -41,7 +46,7 @@ use yii\bootstrap\Modal;
             </ul>
           </li>
           <li><a href="#"> Testimonials </a> </li>
-          <li><a href="#">gallery </a> </li>
+          <!--<li><a href="#">gallery </a> </li>-->
           <li><a href="#"> faq </a> </li>
           <li><a href="#"> Contact us </a> </li>
         </ul>

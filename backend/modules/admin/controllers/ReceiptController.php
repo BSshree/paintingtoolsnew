@@ -27,7 +27,7 @@ class ReceiptController extends Controller {
                 'class' => AccessControl::className(),
                 'rules' => [
                         [
-                        'actions' => ['index', 'create', 'update', 'view', 'delete', 'verifyotp', 'pdfpage', 'gen-pdf', 'mPDF', 'otpset','bookotp','bookapp'],
+                        'actions' => ['index', 'create', 'update', 'view', 'delete', 'verifyotp', 'receipt', 'gen-pdf', 'mPDF', 'otpset','bookotp','bookapp'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -49,10 +49,16 @@ class ReceiptController extends Controller {
     public function actionIndex() {
         $searchModel = new SmsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $modal = Sms::find()->where(['created_at' => 0])->all();
+        //$modal->receipt_data = [];
+       // echo '<pre>'; print_r($modal->receipt_data); exit;
+       // $ser =  $modal->receipt_data; //= serialize($temp_data);
 
+       // $unser = unserialize($ser);
         return $this->render('index', [
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
+                    'modal' => $modal,
         ]);
     }
 
@@ -102,7 +108,7 @@ class ReceiptController extends Controller {
             'options' => ['title' => 'Krajee Report Title'],
             // call mPDF methods on the fly
             'methods' => [
-                'SetHeader' => ['Painting Tools'],
+                'SetHeader' => ['Wall Dressup'],
                 'SetFooter' => ['{PAGENO}'],
             ]
         ]);
@@ -112,19 +118,19 @@ class ReceiptController extends Controller {
         $quotation = rand(1000, 9999);
         $filenames = 'Invoice_' . time();
         $path = $mpdf->Output(Yii::getAlias('@backend') . '/web/uploads/pdf/' . $filenames . '.pdf', 'F');
-        $mail_sub1 = 'Painting Tool-Receipt for service' . $filenames . '';
-        $mail_sub2 = 'Painting Tool-Receipt for service "' . $service . '" with file name "' . $filenames . '.pdf"';
+        $mail_sub1 = 'Wall Dressup-Receipt for service' . $filenames . '';
+        $mail_sub2 = 'Wall Dressup-Receipt for service "' . $service . '" with file name "' . $filenames . '.pdf"';
         $mail_body1 = '<p>Hi Admin,</p>';
-        $mail_body1 .= "A new receipt is created from Painting Tools at backend. <br><br>";
+        $mail_body1 .= "A new receipt is created from Wall Dressup at backend. <br><br>";
         $mail_body1 .= "Here with attached the pdf. <br><br>";
         $mail_body1 .= "<strong>Thanks, </strong>";
-        $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+        $mail_body1 .= "<strong>Wall Dressup </strong><br><br>";
 
         $mail_body2 = "<p>Hi " . $username . ",</p>";
         $mail_body2 .= "A pdf receipt is generated for the payment of your requested service " . $service . " .<br><br>";
         $mail_body2 .= "Here with attached the pdf. <br><br>";
         $mail_body2 .= "<strong>Thanks, </strong>";
-        $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+        $mail_body2 .= "<strong>Wall Dressup </strong><br><br>";
 
 
         $emailSend1 = Yii::$app->mailer->compose()
@@ -165,8 +171,8 @@ class ReceiptController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             $post = Yii::$app->request->post();
             $phone = $post['Sms']['phone'];
-            $token = 'rGdiHxtdXw';
-           // $token = 'ZVDzjxMguN';
+           $token = 'rGdiHxtdXw';
+//            $token = 'ZVDzjxMguN';
             $mobile = $post['Sms']['phone'];
             $rndno = rand(1000, 9999);
 
@@ -215,7 +221,7 @@ class ReceiptController extends Controller {
                     $session['Sms'] = [
                         'newphone' => $phone,
                     ];
-                    return $this->redirect(['pdfpage']);
+                    return $this->redirect(['receipt']);
                 } else if (isset($_POST['button3'])) {
                     Yii::$app->getSession()->setFlash('');
                     // return $this->refresh();
@@ -260,15 +266,16 @@ class ReceiptController extends Controller {
         ));
     }
 
-    public function actionPdfpage() {
+    public function actionReceipt() {
         $model = new Sms();
-       // $model->scenario = 'pdfpage';
+       // $model->scenario = 'receipt';
         $session = Yii::$app->session;
         $session->open();
         $newphone = $session['Sms']['newphone'];
         if ($newphone) {
             if ($model->load(Yii::$app->request->post())) {
                 $post = Yii::$app->request->post();
+               
                 $cc = $post['Sms']['credit_no'];
                 // $var = substr_replace($var, str_repeat("X", 8), 4, 8);
                 $credit_no = 'XXXX-XXXX-XXXX-' . $cc;
@@ -291,7 +298,8 @@ class ReceiptController extends Controller {
                 $model->receipt_data = serialize($temp_data);
 //                $ser = $model->receipt_data;
 //                $unser = unserialize($ser);
-                if ($model->save()) {
+                 
+                if ($model->save(false)) {
                     $send_mail = $model->email;
                     $service = $model->type_service;
                     $username = $model->name;
@@ -324,7 +332,7 @@ class ReceiptController extends Controller {
                         'options' => ['title' => 'Krajee Report Title'],
                         // call mPDF methods on the fly
                         'methods' => [
-                            'SetHeader' => ['Painting tools'],
+                            'SetHeader' => ['Wall Dressup'],
                             'SetFooter' => ['{PAGENO}'],
                         ]
                     ]);
@@ -334,21 +342,21 @@ class ReceiptController extends Controller {
                     $quotation = rand(1000, 9999);
                     $filenames = 'Invoice_' . time();
                     $path = $mpdf->Output(Yii::getAlias('@backend') . '/web/uploads/pdf/' . $filenames . '.pdf', 'F');
-                    $mail_sub1 = 'Painting Tool-Receipt for service' . $filenames . '';
-                    // $mail_sub2 = 'Painting Tool-Receipt for service "' . $service . '" ( "' . $filenames . '.pdf" )';
+                    $mail_sub1 = 'Wall Dressup-Receipt for service' . $filenames . '';
+                    // $mail_sub2 = 'Wall Dressup-Receipt for service "' . $service . '" ( "' . $filenames . '.pdf" )';
                     $mail_sub2 = 'RECEIPT OF SERVICE';
                     $mail_body1 = "<p>Hi " . $issuedby . ",</p>";
-                    $mail_body1 .= "A new receipt is created from Painting Tools at backend. <br><br>";
+                    $mail_body1 .= "A new receipt is created from Wall Dressup at backend. <br><br>";
                     $mail_body1 .= "Here with attached the pdf. <br><br>";
                     $mail_body1 .= "<strong>Regards, </strong><br>";
-                    $mail_body1 .= "<strong>Painting Tools </strong><br><br>";
+                    $mail_body1 .= "<strong>Wall Dressup </strong><br><br>";
 
                     $mail_body2 = "<p>Hi " . $username . ",</p>";
                     // $mail_body2 .= "A pdf receipt is generated for the payment of your requested service " . $service . ".<br>";
                     $mail_body2 .= "Kindly find the 'Receipt of Service' attached with this mail for your reference.<br><br>";
                     // $mail_body2 .= "Here with attached the pdf. <br><br>";
                     $mail_body2 .= "<strong>Regards, </strong><br>";
-                    $mail_body2 .= "<strong>Painting Tools </strong><br><br>";
+                    $mail_body2 .= "<strong>Wall Dressup </strong><br><br>";
 
 
                     $emailSend1 = Yii::$app->mailer->compose()
@@ -373,7 +381,7 @@ class ReceiptController extends Controller {
                         return $this->redirect(['create']);
                     } else {
 
-                        return $this->redirect(['pdfpage']);
+                        return $this->redirect(['receipt']);
                     }
                 }
             }
@@ -381,7 +389,7 @@ class ReceiptController extends Controller {
             return $this->redirect(['create']);
         }
         $session_otp = '';
-        return $this->render('pdfpage', [
+        return $this->render('receipt', [
                     'model' => $model,
                     'session_otp' => $session_otp,
         ]);

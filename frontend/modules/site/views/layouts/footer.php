@@ -41,9 +41,9 @@ use yii\widgets\ActiveForm;
                 <li><a href="/wallpapers">Wallpapers</a></li>
                 <li><a href="/royale-play">Royale Play</a></li>
                 <li><a href="/home-makeover">Home Makeovers</a></li>
-                <li><a href="/potraits-statues-murals">Potraits </a></li>
-                <li><a href="/potraits-statues-murals">Statues </a></li>
-                <li><a href="/potraits-statues-murals">Metal Murals</a></li>
+                <li><a href="/potraits-statues-murals#potrait">Potraits </a></li>
+                <li><a href="/potraits-statues-murals#statue">Statues </a></li>
+                <li><a href="/potraits-statues-murals#mural">Metal Murals</a></li>
               </ul>
             </div>
             <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4 footer-part1">
@@ -93,6 +93,7 @@ $script = <<< JS
             if(servicename=="Gift a wall"){
           var giftname = $(e.relatedTarget).data('gift');
           $("#sms-plan").val(giftname);
+          $(".show-plans").show();
         }
      }); 
 
@@ -152,17 +153,17 @@ $script = <<< JS
         
 //        $(".show-item-hidden").show(); 
 //        $(".item-default-load").hide();
-        var url = $(location).attr("href"),
-            parts = url.split("/"),
-            last_part = parts[parts.length-1];
+//        var url = $(location).attr("href"),
+//            parts = url.split("/"),
+//            last_part = parts[parts.length-1];
        
        
-        if(last_part ){
-        if( last_part=='royale-play-calculator'){
-        last_part ="Royale play";
-            }
+//        if(last_part ){
+//        if( last_part=='royale-play-calculator'){
+//        last_part ="Royale play";
+//            }
 
-     if( last_part=='potraits-statues-murals'){
+//     if( last_part=='potraits-statues-murals'){
       // var potr = $('#metal-book').val();
         //var sta = $('#statue-book').data('pot')
         //var met = $('#metal-book').data('pot')
@@ -201,23 +202,23 @@ $script = <<< JS
 //         if(met){
 //         last_part ="Metal murals";
 //        }
-    }
+//    }
         
         
-        if( last_part=='home-makeover-calculator'){
-        last_part ="Home makeover";
-            }
-        if( last_part=='general-painting-calculator'){
-        last_part ="General painting";
-            }
+//        if( last_part=='home-makeover-calculator'){
+//        last_part ="Home makeover";
+//            }
+//        if( last_part=='general-painting-calculator'){
+//        last_part ="General painting";
+//            }
 
         //alert(last_part);
-        var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);
+        //var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);
         //alert(cap);
-        var res_str = cap.replace(/-/g, ' ');    
+        //var res_str = cap.replace(/-/g, ' ');    
               //  alert(res_str);
            // $("#sms-type_service").val(res_str);
-        }
+        //}
 
         $.ajax({
                 url  : '{$sendotp}',
@@ -296,6 +297,7 @@ $script = <<< JS
                  navListItems.eq(2).attr('disabled','');
                 nextStepWizard.removeAttr('disabled').trigger('click'); 
                  $(".loading-image1").hide(); 
+                 setTimeout(function(){  $('#Bookanotp').modal('hide');  location.reload(); }, 5000);
             }
         },
         error: function () {

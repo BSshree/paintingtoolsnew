@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
     <div class="panel-body">
         <div class="form-group">
             <label class="control-label1">Phone Number</label>
-            <input  type="text" id="phone" required="required" class="form-control" placeholder="Enter Your Phone Number" />
+            <input  type="number"  pattern="[0-9]{10}" id="phone" required="required" class="form-control" placeholder="Enter Your Phone Number" />
             <div class="errorMessage1"></div>
         </div>
         <button class="btn btn2 nextBtn float-right" data-form="phone" id="phone_form" >Send OTP <span aria-hidden="true">&rarr;</span></button>
@@ -64,10 +64,10 @@ use yii\widgets\ActiveForm;
     <div class="panel-body">
         <div class="form-group">
             <label class="control-label1">OTP Number</label>
-            <input id="otp_no" type="text" required="required" class="form-control" placeholder="Enter Your OTP Number" />
+            <input id="otp_no" type="number" maxlength="2" required="required" class="form-control" placeholder="Enter Your OTP Number" />
             <div class="errorMessage"></div>
         </div>
-    <button class="btn btn2 nextBtn float-left previous prevBtn" data-form="phone" id="phone_form" >Previous <span aria-hidden="true">&rarr;</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn2 nextBtn float-left previous prevBtn" data-form="phone" id="phone_form" ><span aria-hidden="true">&larr;</span> Previous </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button class="btn btn2 nextBtn float-right next nextBtn" data-form="otp" id="otp_form" >Next <span aria-hidden="true">&rarr;</span></button>
 
 <!--        <nav>
@@ -95,13 +95,13 @@ use yii\widgets\ActiveForm;
                     'validateOnChange' => true,
                     'validateOnType' => true,
                     'fieldConfig' => [
-                        'template' => "<div class=\"form-group\"><label class=\"control-label1\">{label}</label>{input}<div class=\"errorMessage\">{error}</div></div>",
-                    ],
+                        //'template' => "<div class=\"form-group\"><label class=\"control-label1\">{label}</label>{input}<div class=\"errorMessage\">{error}</div></div>",
+                        ],
         ]);
 
-        echo $form->field($model, 'name')->textInput(['class' => 'form-control','placeholder'=>'Enter Your Name']);
-
-        echo $form->field($model, 'email')->textInput(['class' => 'form-control','placeholder'=>'Enter Your Email Address']);
+        
+        echo $form->field($model, 'name1')->textInput(['class' => 'form-control','placeholder'=>'Enter Your Name']);
+        echo $form->field($model, 'email1')->textInput(['class' => 'form-control','placeholder'=>'Enter Your Email Address']);
 
         $services = array(
                         '' => '--select--',
@@ -119,17 +119,15 @@ use yii\widgets\ActiveForm;
          
         echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','data-type'=>'item','required'=>true])->dropDownList($services)->label('Service'); ?>
  
-       <!--<div style="display:none" class="form-group show-gift-plan">-->
-     <!--<label class="control-label1">Service</label>-->
-    <!--<input id="giftawall" type="hidden"  class="form-control item-default-load" />-->
-    <!--<input id="item" type="text"  class="form-control" />-->
-       <!--</div>-->
-      <?php  echo $form->field($model, 'mess')->textInput(['class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
+       <div  style="display:none"  class="show-plans">
+        <?= $form->field($model, 'plan')->textInput(['value'=>''])->label('Plan'); ?>
+    </div>
+       
+      <?php  echo $form->field($model, 'mess')->textarea(['rows' => '4','class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
 
         ?>
     <div style="display:none" class="loading-image1"><img src="themes/site_theme/images/ajax-loader.gif" alt=""><br></div>
     
-        <?= $form->field($model, 'plan')->hiddenInput(['value'=>''])->label(false); ?>
 
 <!--        <nav>
             <ul class="pager">-->
