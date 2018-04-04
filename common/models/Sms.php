@@ -15,7 +15,9 @@ use Yii;
 class Sms extends \yii\db\ActiveRecord
 {
     public $name1;
+    public $name;
     public $email1;
+    public $email;
     public $address;
     public $type_service;
     public $issued_by;
@@ -23,6 +25,7 @@ class Sms extends \yii\db\ActiveRecord
     public $otp;
     public $newphone;
     public $phone1;
+    public $phone;
     public $verifyotp;
     public $payment_mode;
     public $amount;
