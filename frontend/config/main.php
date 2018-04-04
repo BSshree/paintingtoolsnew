@@ -69,6 +69,7 @@ return [
                  'mailmehome' => 'site/site/mailmehome',
                  'mailmegeneral' => 'site/site/mailmegeneral',
                  'sendmail' => 'site/site/sendmail',
+                 'contactus' => 'site/site/contactus',
                 
                    [
                     'pattern' => '/gift-a-wall/<slug:>',
