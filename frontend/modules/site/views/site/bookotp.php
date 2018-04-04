@@ -55,6 +55,7 @@ use yii\widgets\ActiveForm;
         </nav>-->
 
     </div>
+    
 </div>
 
 <div class="panel panel-primary setup-content" id="step-2">

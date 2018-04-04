@@ -233,7 +233,7 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                     <div class="form-group">
                                                         <div class="g-recaptcha" data-sitekey="6LdCZU4UAAAAAFo-L00-OjH_qF-0J_I67y_5LpUC"></div>
                                                         <!--<input class="form-control d-none" name="recapt" data-recaptcha="true" required data-error="Please complete the Captcha">-->
-                                                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha-royal">
+                                                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha-general">
                                                         <div class="help-block with-errors"></div>
                                                     </div>
                                                    <div class="modal-footer text-center float-left">
@@ -343,21 +343,6 @@ jQuery(document).ready(function () {
                 i: counter
             };
             $(".tbody1").hide().append(tpl(tplData)).show('slow');
-//            $('input[name="interior['+counter+'][room-name1]"]').rules("add", {
-//                required: true
-//            });
-//            $('input[name="appr-sqft1['+counter+']"]').rules("add", {
-//                required: true
-//            });
-//            $('input[name="radio1['+counter+']"]').rules("add", {
-//                required: true
-//            });
-//             $('select[name="selecti1['+counter+']"]').rules("add", {
-//                required: true
-//            });
-//             $('select[name="selectr1['+counter+']"]').rules("add", {
-//                required: true
-//            });
             counter += 1;
         });
             

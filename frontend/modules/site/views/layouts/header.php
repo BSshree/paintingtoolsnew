@@ -5,15 +5,28 @@ use yii\web\View;
 use yii\bootstrap\Modal;
 ?>
 <header>
-  <div class="header-row1">
+     <div class="header-row1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <img src="themes/site_theme/images/logo.png"  alt=""></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6 header-right offset-xl-2 offset-lg-1">
+          <div class="top-btn-cont"> <a href="#" class="btn contact-btn1" id="dropdownMenuButton" data-toggle="modal" data-target="#Bookanotp"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> Book An Appointment </a> 
+              <a href="#" class="btn contact-btn1 contact-btn2 " data-toggle="dropdown" aria-haspopup="true" ><i class="fas fa-map-marker-alt"></i> Operational In </a>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Madurai</a>
+                  <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Coimbatore</a>
+                </div></div>
+          <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> (364) 106-7572 </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <div class="header-row1">
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <img src="themes/site_theme/images/logo.png"  alt=""></div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6 header-right offset-xl-2 offset-lg-1">
           <div class="top-btn-cont">
-               <!--<a href="#" data-toggle="modal" data-target="#exampleModalCenter">--> 
-            <?php // Html::button('Book An Appointment', ['value'=>Url::to('/bookotp'),'class' => 'btn contact-btn1 modalButton', 'data-toggle'=>'modal', 'data-target'=>'#exampleModalCenter']) ?>
-                 <!--</a>-->              
             <a href="#" class="btn contact-btn1" data-toggle="modal" data-target="#Bookanotp"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> Book An Appointment </a>     
                 <a href="" class="btn contact-btn1 contact-btn2 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i> Operational In </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -21,12 +34,12 @@ use yii\bootstrap\Modal;
                   <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Coimbatore</a>
                 </div>
             </div>
-          <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> (364) 106-7572 </div>
+          <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> +91 9976099780</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="header-row2">
+  </div>-->
+  <div class="header-row2 ">
     <div class="container">
       <nav id='cssmenu'>
         <div id="head-mobile"> Menu</div>
@@ -48,7 +61,7 @@ use yii\bootstrap\Modal;
           <li><a href="#"> Testimonials </a> </li>
           <!--<li><a href="#">gallery </a> </li>-->
           <li><a href="#"> faq </a> </li>
-          <li><a href="#"> Contact us </a> </li>
+          <li><a href="contactus"> Contact us </a> </li>
         </ul>
       </nav>
     </div>

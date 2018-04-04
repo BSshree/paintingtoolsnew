@@ -61,6 +61,9 @@ $this->title ='Wall Dressup - Concept walls';
             <p class="concept-name"> Abstract design wall </p>
           </div>
         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"> 
+                            <a href="#" class="btn btn1 btn1-2 concept-background" data-toggle="modal" data-servicename="Concept walls" data-target="#Bookanotp">BOOK NOW !</a>
+                        </div>
       </div>
     </div>
   </div>

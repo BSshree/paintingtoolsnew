@@ -25,7 +25,7 @@ class SiteController extends Controller {
                 'only' => ['logout', 'signup'],
                 'rules' => [
                         [
-                        'actions' => ['login', 'error', 'changepassword', 'pages', 'bookotp', 'ajaxbookotp', 'mailme', 'mailmehome', 'mailmegeneral', 'calculators'],
+                        'actions' => ['login', 'error', 'changepassword', 'pages', 'bookotp', 'ajaxbookotp', 'mailme', 'mailmehome', 'mailmegeneral', 'calculators','contactus'],
                         'allow' => true,
                     ],
 //                    [
@@ -123,7 +123,7 @@ class SiteController extends Controller {
 
                 $emailSend1 = Yii::$app->mailer->compose()
                         ->setFrom(['sumanasdev@gmail.com'])
-                        ->setTo('banushree@arkinfotec.com')
+                        ->setTo('arumugabalaji@gmail.com')
                         ->setSubject($mail_sub1)
                         ->setHtmlBody($mail_body1)
                         ->send();
@@ -209,7 +209,7 @@ class SiteController extends Controller {
 
                 $emailSend1 = Yii::$app->mailer->compose()
                         ->setFrom(['sumanasdev@gmail.com'])
-                        ->setTo('banushree@arkinfotec.com')
+                        ->setTo('arumugabalaji@gmail.com')
                         ->setSubject($mail_sub1)
                         ->setHtmlBody($mail_body1)
                         ->send();
@@ -357,7 +357,7 @@ class SiteController extends Controller {
 
                 $emailSend1 = Yii::$app->mailer->compose()
                         ->setFrom(['sumanasdev@gmail.com'])
-                        ->setTo('banushree@arkinfotec.com')
+                        ->setTo('arumugabalaji@gmail.com')
                         ->setSubject($mail_sub1)
                         ->setHtmlBody($mail_body1)
                         ->send();
@@ -390,8 +390,8 @@ class SiteController extends Controller {
             $json = array();
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
-               // $token = 'rGdiHxtdXw';
-                $token = 'ZVDzjxMguN';
+                $token = 'rGdiHxtdXw';
+//                $token = 'ZVDzjxMguN';
                 $mobile = $data['req_val'];
                 $rndno = rand(1000, 9999);
                 $message = urlencode("Your otp number is " . $rndno);
@@ -469,7 +469,7 @@ class SiteController extends Controller {
 
             $emailSend1 = Yii::$app->mailer->compose()
                     ->setFrom(['sumanasdev@gmail.com'])
-                    ->setTo('banushree@arkinfotec.com')
+                    ->setTo('arumugabalaji@gmail.com')
                     ->setSubject($mail_sub1)
                     ->setHtmlBody($mail_body1)
                     ->send();
@@ -517,7 +517,7 @@ class SiteController extends Controller {
                 $mail_body1 .= "You have a new Quote-request. <br><br>";
                 $mail_body1 .= "<table cellpadding='10' border='1' >";
                 $mail_body1 .= "<tr><th>Name: </th><td>".$na1."</td></tr>";
-                $mail_body1 .= "<tr><th>Emai:</th><td>".$em1."</td></tr>";
+                $mail_body1 .= "<tr><th>Email:</th><td>".$em1."</td></tr>";
                 $mail_body1 .= "<tr><th>Phone: </th><td>".$ph1."</td></tr>";
                 $mail_body1 .= "<tr><th>Message: </th><td>".$mes1."</td></tr>";
                 $mail_body1 .= "</table><br><br>";
@@ -525,7 +525,7 @@ class SiteController extends Controller {
                 $mail_body1 .= "<strong>Regards, </strong><br>";
                 $mail_body1 .= "<strong>Wall Dressup </strong><br><br>";
 
-                $mail_sub2 = 'Request a Quote';
+                $mail_sub2 = 'Request A Quote';
                 $mail_body2 = "<p>Hi " . $na1 . ",</p>";
                 $mail_body2 .= "Thank you for contacting us!<br>We will get back to you at the earliest.<br><br>";
                 $mail_body2 .= "<strong>Regards, </strong><br>";
@@ -533,7 +533,7 @@ class SiteController extends Controller {
 
                 $emailSend1 = Yii::$app->mailer->compose()
                         ->setFrom(['sumanasdev@gmail.com'])
-                        ->setTo('banushree@arkinfotec.com')
+                        ->setTo('arumugabalaji@gmail.com')
                         ->setSubject($mail_sub1)
                         ->setHtmlBody($mail_body1)
                         ->send();
@@ -564,6 +564,66 @@ class SiteController extends Controller {
     }
         
 
+    public function actionContactus(){
+         $model = new Sms();
+        
+          if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+        
+            $na1 = $data['na1'];
+            $em1 = $data['em1'];
+            $ph1 = $data['ph1'];
+            $mes1 = $data['mes1'];
+            if ($data['form'] == 'contact') {
+                $mail_sub1 = 'Enquire A Request';
+                $mail_body1 = "<p>Hi Admin,</p>";
+                $mail_body1 .= "You have a new enquiry. <br><br>";
+                $mail_body1 .= "<table cellpadding='10' border='1' >";
+                $mail_body1 .= "<tr><th>Name: </th><td>".$na1."</td></tr>";
+                $mail_body1 .= "<tr><th>Email:</th><td>".$em1."</td></tr>";
+                $mail_body1 .= "<tr><th>Phone: </th><td>".$ph1."</td></tr>";
+                $mail_body1 .= "<tr><th>Message: </th><td>".$mes1."</td></tr>";
+                $mail_body1 .= "</table><br><br>";
+               // $mail_body1 .= "Name: " . $na1 . "<br>Email: " . $em1 . " <br> Phone: " . $ph1 . "<br>Message: " . $mes1 . "<br><br>";
+                $mail_body1 .= "<strong>Regards, </strong><br>";
+                $mail_body1 .= "<strong>Wall Dressup </strong><br><br>";
+
+                $mail_sub2 = 'Enquire A Request';
+                $mail_body2 = "<p>Hi " . $na1 . ",</p>";
+                $mail_body2 .= "Thank you for contacting us!<br>We will get back to you at the earliest.<br><br>";
+                $mail_body2 .= "<strong>Regards, </strong><br>";
+                $mail_body2 .= "<strong>Wall Dressup </strong><br><br>";
+
+                $emailSend1 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo('arumugabalaji@gmail.com')
+                        ->setSubject($mail_sub1)
+                        ->setHtmlBody($mail_body1)
+                        ->send();
+                $emailSend2 = Yii::$app->mailer->compose()
+                        ->setFrom(['sumanasdev@gmail.com'])
+                        ->setTo($em1)
+                        ->setSubject($mail_sub2)
+                        ->setHtmlBody($mail_body2)
+                        ->send();
+
+                if ($emailSend1 && $emailSend2) {
+                   //$json=array();
+                   // $json["mgs"] = "success";
+                    //echo json_encode($json);
+                    echo "success";
+                    exit;
+                } else {
+                     echo "error";exit;
+                }
+            }
+        }
+         
+         
+         return $this->render('contactus', [
+                    'model' => $model,
+        ]);
+    }
     
 
 }
