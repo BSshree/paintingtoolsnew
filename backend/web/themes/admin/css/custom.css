@@ -58,4 +58,52 @@ span.slug {
   padding-top: 7px;
   text-align: left;
 }
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.recep-heading{
+    
+    color: #337ab7;
+    
+    
+    
+}
 
+.pdfimg-topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.pdftab td, .pdftab th {
+    border: 0px solid #ddd  !important;
+    padding: 8px  !important;
+}
+.tab-lef{
+    
+    text-align:left !important;
+    padding-left: 25px  !important;
+     float: left  !important;
+}
+.recp-btn{
+    
+    background: #0594d2;
+    color: #ffffff;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.pdf-border{
+               width: 100%;
+               height: 100%;
+               border:4px double black;
+           }
+           
+
+.panel-body {
+    padding: 37px !important;
+}

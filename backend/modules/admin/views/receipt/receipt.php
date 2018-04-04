@@ -39,13 +39,13 @@ $issued = array(
                         ?>
                     <div class="box-body">
                     <?php
-                    echo $form->field($model, 'name')->textInput(['border' => 'none']);
+                    echo $form->field($model, 'name')->textInput(['border' => 'none','placeholder'=>'Enter Name']);
 
-                    echo $form->field($model, 'email')->textInput(['border' => 'none']);
+                    echo $form->field($model, 'email')->textInput(['border' => 'none','placeholder'=>'Enter Email Address']);
 
-                    echo $form->field($model, 'phone')->textInput(['border' => 'none']);
+                    echo $form->field($model, 'phone')->textInput(['border' => 'none','placeholder'=>'Enter Phone Number']);
 
-                    echo $form->field($model, 'address')->textInput(['border' => 'none']);
+                    echo $form->field($model, 'address')->textInput(['border' => 'none','placeholder'=>'Enter Address']);
 
                     $services = array(
                         '0' => '--select--',
@@ -59,10 +59,10 @@ $issued = array(
 
                     echo $form->field($model, 'issued_by')->textInput(['maxlength' => true]);
 
-                    echo $form->field($model, 'issued_date')->textInput(['class' => 'form-control datepicker', 'id' => 'from_date'])
+                    echo $form->field($model, 'issued_date')->textInput(['class' => 'form-control datepicker', 'id' => 'from_date','placeholder'=>'Enter Service'])
                             ->label('Issued On');
 
-                    echo $form->field($model, 'amount')->textInput(['maxlength' => true]);
+                    echo $form->field($model, 'amount')->textInput(['maxlength' => true,'placeholder'=>'Enter Amount']);
 
                     $payment_modes = array(
                         '' => '--select--',
@@ -72,15 +72,15 @@ $issued = array(
                     );
                     ?>
                         <div class="box-body">
-                            <?= $form->field($model, 'payment_mode')->textInput(['maxlength' => true ])->dropDownList($payment_modes) ?>
+                            <?= $form->field($model, 'payment_mode')->textInput(['maxlength' => true ,'placeholder'=>'Select Payment Mode'])->dropDownList($payment_modes) ?>
                         </div>
 
                         <div  id="sms-cheque_no" style="display:none">
-                            <?= $form->field($model, 'cheque_no')->textInput(['maxlength' => 8])->label('Cheque No'); ?>
+                            <?= $form->field($model, 'cheque_no')->textInput(['maxlength' => 8,'placeholder'=>'Enter 8 digits only'])->label('Cheque No'); ?>
                         </div>
 
                         <div  id="sms-credit_no" style="display:none">
-                            <?= $form->field($model, 'credit_no')->textInput(['maxlength' => 4 , 'placeholder' => 'Enter last 4 digits ','id'=>'credit'])->label('Credit Card No'); ?>
+                            <?= $form->field($model, 'credit_no')->textInput(['maxlength' => 4 , 'placeholder' => 'Enter last 4 digits only','id'=>'credit'])->label('Credit Card No'); ?>
                         </div>
 
                     </div>

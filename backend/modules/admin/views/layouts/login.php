@@ -27,7 +27,7 @@ LoginAsset::register($this);
        
             <div class="login-logo">
                 <bR><Br>
-                <a href="#"><b>Painting tools</b></a>
+                <a href="#"><b>Wall Dressup</b></a>
             </div>
           
                  <form action="#" method="post">

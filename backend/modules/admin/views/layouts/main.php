@@ -35,7 +35,7 @@ AppAssetAdmin::register($this);
             <?php echo $this->render('@backend/modules/admin/views/layouts/_sidebarNav'); ?>  
             <div class="content-wrapper">
                 <section class="content-header">
-                    <h1>
+                    <h1 class="recep-heading">
                         <?= Html::encode($this->title) ?>
                     </h1>
                     <?=

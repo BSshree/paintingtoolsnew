@@ -7,7 +7,7 @@
 }
 .stepwizard {
     display: table;
-    width: 100%;
+    width: 90%;
     position: relative;
 }
 .stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
@@ -46,4 +46,9 @@
 }
 .help-block{
     color:red;
+}
+
+.recp-body{
+    
+width:84%;    
 }

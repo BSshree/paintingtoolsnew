@@ -13,7 +13,7 @@ use yii\web\View;
 
 <header class="main-header">
     <a href="#" class="logo">
-      <span class="logo-lg"><b>Painting </b>tools</span>
+      <span class="logo-lg"><b>Wall </b>Dress up</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -31,14 +31,14 @@ use yii\web\View;
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/backend/web/themes/admin/img/user2-160x160.jpg" width="25" height="25" class="img-circle" alt="User Image">
+              <img src="/backend/web/themes/admin/img/avatar5.png" width="25" height="25" class="img-circle" alt="User Image">
            
               <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-              <img src="/backend/web/themes/admin/img/user2-160x160.jpg" width="25" height="25" class="img-circle" alt="User Image">
+              <img src="/backend/web/themes/admin/img/avatar5.png" width="25" height="25" class="img-circle" alt="User Image">
 
                 <p>
                  Admin 

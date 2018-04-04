@@ -25,7 +25,7 @@ class AppAssetAdmin extends AssetBundle {
         'css/datepicker/bootstrap-datepicker.min.css',
         'css/datepicker/daterangepicker.css',
         //  'css/square/blue.css',
-        // 'css/custom.css',
+         'css/custom.css',
         // 'css/bootstrap-select.css',
         'bootstrap/css/bootstrap3-wysihtml5.min.css',
        
