@@ -134,7 +134,7 @@ class ReceiptController extends Controller {
 
         $emailSend1 = Yii::$app->mailer->compose()
                 ->setFrom(['sumanasdev@gmail.com'])
-                ->setTo('banushree@arkinfotec.com')
+                ->setTo('arumugabalaji@gmail.com')
                 ->setSubject($mail_sub1)
                 ->setHtmlBody($mail_body1)
                 ->attach(Yii::getAlias('@backend') . '/web/uploads/pdf/' . $filenames . '.pdf');
@@ -142,7 +142,7 @@ class ReceiptController extends Controller {
 
         $emailSend2 = Yii::$app->mailer->compose()
                 ->setFrom(['sumanasdev@gmail.com'])
-                ->setTo('banushree@arkinfotec.com')
+                ->setTo('arumugabalaji@gmail.com')
                 ->setSubject($mail_sub2)
                 ->setHtmlBody($mail_body2)
                 ->attach(Yii::getAlias('@backend') . '/web/uploads/pdf/' . $filenames . '.pdf');
@@ -231,8 +231,8 @@ class ReceiptController extends Controller {
             $json = array();
             $data = Yii::$app->request->post();
             if ($data['form'] == 'phone') {
-               // $token = 'rGdiHxtdXw';
-               $token = 'ZVDzjxMguN';
+                $token = 'rGdiHxtdXw';
+              // $token = 'ZVDzjxMguN';
                 $mobile = $data['req_val'];
                 $rndno = rand(1000, 9999);
                 $message = urlencode("Your otp number is " . $rndno);
@@ -503,7 +503,7 @@ class ReceiptController extends Controller {
 
                     $emailSend1 = Yii::$app->mailer->compose()
                             ->setFrom(['sumanasdev@gmail.com'])
-                            ->setTo('banushree@arkinfotec.com')
+                            ->setTo('arumugabalaji@gmail.com')
                             ->setSubject($mail_sub1)
                             ->setHtmlBody($mail_body1)
                             ->attach(Yii::getAlias('@backend') . '/web/uploads/pdf/' . $filenames . '.pdf');
