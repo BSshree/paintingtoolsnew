@@ -251,11 +251,10 @@ $this->title ='Wall Dressup - General Painting';
         <div class="owl-carousel owl-theme" id="inner-gallery-carousel">
           <!--<div class="item"> <img src="themes/site_theme/images/0XVBNmMJHDb_9f8afe751acd73161c8774067551e067.jpg"  alt=""></div>-->
           <div class="item"> <img src="themes/site_theme/images/gn-1.png"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/5b.jpg"  alt=""></div>
-          <div class="item"> <img src="themes/site_theme/images/6.jpg"  alt=""></div>
-          <!--<div class="item"> <img src="themes/site_theme/images/88124867T-1507023474.jpeg"  alt=""></div>-->
-          <!--<div class="item"> <img src="themes/site_theme/images/13902878300Elevation.JPG"  alt=""></div>-->
-          <!--<div class="item"> <img src="themes/site_theme/images/baikunth-elevation-1382899.jpeg"  alt=""></div>-->
+          <div class="item"> <img src="themes/site_theme/images/gnp1.png"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gnp4.png"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gnp3.png"  alt=""></div>
+          <div class="item"> <img src="themes/site_theme/images/gnp2.png"  alt=""></div>
         </div>
       </div>
     </div>
