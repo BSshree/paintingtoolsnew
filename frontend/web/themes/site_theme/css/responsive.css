@@ -205,6 +205,9 @@ header {
 }
 
 
+#rc-imageselect, .recaptx {transform:scale(0.98);-webkit-transform:scale(0.98);transform-origin:0 0;-webkit-transform-origin:0 0;} 
+
+
 }
 
  /*Small devices (landscape phones, 576px and up)*/
@@ -487,5 +490,5 @@ header {
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-...
+#rc-imageselect, .recaptx {transform:scale(1.25);-webkit-transform:scale(1.25);transform-origin:0 0;-webkit-transform-origin:0 0;} 
 }

@@ -176,11 +176,11 @@ $('#inner-gallery-carousel').owlCarousel({
     }, 500);
 });
 
-  
-  
-  
-  
-  
+
+
+
+
+
 })(jQuery);
 
 (function($){

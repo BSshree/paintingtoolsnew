@@ -149,4 +149,69 @@ border-radius:.3rem;
       width: 100px;
       
   }
+  
+  .contact-map-heading{
+      
+          width: 100%;
+    float: left;
+    background: url(../images/spe1.png) center bottom no-repeat;
+    color: #0594d2;
+    text-align: center;
+    padding-bottom: 2px;
+    margin-bottom: 25px;
+  }
+  #successcont{
+      
+      color:#68b716;
+   font-weight: 600; 
+  }
+/*  .recaptx
+  {
+      width: 318px !important;
+  }*/
+ 
+  .wall-conten{
+       text-align: center;
+    /*background: url(../images/spe1.png) center bottom no-repeat;*/
+/*    padding-bottom: 30px;
+    margin-bottom: 0px;*/
+    background:#E0E0E0;
+     display: inline-block;
+     left:8%;
+     width:85%;
+     height:50%;
+     top:25%;
+     /*position:absolute;*/
+    /*left:80px;*/
+  }
+  .gp-txt3 {
+    width: 100%;
+    float: left;
+    text-align: left;
+    /* padding: 40px 35px 0px 35px; */
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.concept-background{
+    background: #0594d2;
+    width:50%;
+    font-weight: 500;
+    font-size: x-large;
+    
+ 
+}
+
+
+label[for="hiddenRecaptcha-contact"] {
+   margin-top: 17px; 
+}
+
+.potrait-heads { 
+    padding-top: 120px; 
+}
+.dis-bold{
+    font-weight: 700;
+}
+
 
