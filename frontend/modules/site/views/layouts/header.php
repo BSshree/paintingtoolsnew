@@ -16,7 +16,7 @@ use yii\bootstrap\Modal;
                   <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Madurai</a>
                   <a class="dropdown-item operational-back" href="#"><i class="fas fa-map-marker-alt"></i> Coimbatore</a>
                 </div></div>
-          <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> (364) 106-7572 </div>
+          <div class="top-contact"> <span> <i class="fas fa-phone fa-flip-horizontal"></i> Call Us Now ! </span> +91 9976099780 </div>
         </div>
       </div>
     </div>
