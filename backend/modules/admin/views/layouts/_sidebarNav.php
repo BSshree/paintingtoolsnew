@@ -23,6 +23,13 @@
             <li class="active"><a href="/webpanel/admin/faq/create"><i class="fa fa-circle-o"></i> FAQs</a></li>
           </ul>
         </li>
+       </ul><br>
+       <ul class="sidebar-menu" data-widget="tree">
+        <li class="active treeview">
+          <ul class="treeview-menu">
+            <li class="active"><a href="/webpanel/admin/testimonials/create"><i class="fa fa-circle-o"></i> Testimonials</a></li>
+          </ul>
+        </li>
       </ul>
     </section>
   </aside>

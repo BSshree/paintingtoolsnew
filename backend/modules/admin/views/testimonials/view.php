@@ -4,18 +4,19 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Faq */
+/* @var $model common\models\Testimonials */
 
-$this->title = "View FAQ";
-$this->params['breadcrumbs'][] = ['label' => 'Faqs', 'url' => ['index']];
+$this->title = "View Testimonials";
+$this->params['breadcrumbs'][] = ['label' => 'Testimonials', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="faq-view">
+<div class="testimonials-view">
 
+    <h1><?php // Html::encode($this->title) ?></h1>
 
     <p>
-        <?php //Html::a('Update', ['update', 'id' => $model->faq_id], ['class' => 'btn btn-primary']) ?>
-        <?php //Html::a('Delete', ['delete', 'id' => $model->faq_id], [
+        <?php // Html::a('Update', ['update', 'id' => $model->test_id], ['class' => 'btn btn-primary']) ?>
+        <?php // Html::a('Delete', ['delete', 'id' => $model->test_id], [
 //            'class' => 'btn btn-danger',
 //            'data' => [
 //                'confirm' => 'Are you sure you want to delete this item?',
@@ -27,9 +28,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'faq_id',
-            'question:ntext',
-            'answer:ntext',
+            'test_id',
+            'statement:ntext',
+            'name:ntext',
 //            'created_at',
 //            'updated_at',
         ],

@@ -1,3 +1,10 @@
+<?php
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
+
+$this->title ='Wall Dressup - Testimonials';
+?>
 <section class="slider-cont inner-page-heading">
   <div class="container">
     <h1>Testimonials</h1>
