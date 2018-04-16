@@ -36,6 +36,7 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                     <input name="general" type="hidden" class="form-control" value="general" >
                                 </div>
                             </div>
+                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                     <div id="accordion">
@@ -262,9 +263,6 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                    </form>
                     <div class="modal-footer text-center">
                         <button type="button" class="btn btn2" data-toggle="modal" data-servicename="General painting" data-target="#Bookanotp">Book An Appointment</button>
                         <?php //Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
@@ -272,10 +270,15 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                         <!--<button type="hidden" class="btn btn1" id="mailme-general" data-toggle="modal" data-target="#mailmepopup">Mail me</button>-->
                         <!--<button type="button" class="btn btn1" id="mailme-general" data-toggle="modal" data-target="#exam">Mail me</button>-->
                     </div>
+                     </form>
+
                 </div>
             </div>
         </div>
     </div>
+    
+    
+</section>
 
     <!--</div>-->
     <script type="text/html" id="form_tpl">
