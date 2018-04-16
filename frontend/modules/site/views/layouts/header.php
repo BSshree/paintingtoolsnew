@@ -8,7 +8,7 @@ use yii\bootstrap\Modal;
      <div class="header-row1">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <img src="themes/site_theme/images/logo.png"  alt=""></div>
+          <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <a href="/"><img src="themes/site_theme/images/logo.png"  alt=""></a></div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6 header-right offset-xl-2 offset-lg-1">
           <div class="top-btn-cont"> <a href="#" class="btn contact-btn1" id="dropdownMenuButton" data-toggle="modal" data-target="#Bookanotp"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> Book An Appointment </a> 
               <a href="#" class="btn contact-btn1 contact-btn2 " data-toggle="dropdown" aria-haspopup="true" ><i class="fas fa-map-marker-alt"></i> Operational In </a>
@@ -58,9 +58,9 @@ use yii\bootstrap\Modal;
               <li> <a href="concept-walls">Concept walls</a> </li>
             </ul>
           </li>
-          <li><a href="#"> Testimonials </a> </li>
+          <li><a href="testimonials"> Testimonials </a> </li>
           <!--<li><a href="#">gallery </a> </li>-->
-          <li><a href="#"> faq </a> </li>
+          <li><a href="faq"> faq </a> </li>
           <li><a href="contactus"> Contact us </a> </li>
         </ul>
       </nav>

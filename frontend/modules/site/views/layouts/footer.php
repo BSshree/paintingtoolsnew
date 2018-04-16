@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
       <div class="row">
         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 footer-part1">
           <h6> About us</h6>
-          <p> <img src="themes/site_theme/images/footer-logo.png"  alt=""></p>
+          <p> <a href="/"><img src="themes/site_theme/images/footer-logo.png"  alt=""></a></p>
           <p> Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit. Fusce luctus maximus rutrum. Vestibulum ligula erat, mattis eget</p>
           <p><a href="#" class="btn btn1"> Read More </a> </p>
@@ -25,9 +25,9 @@ use yii\widgets\ActiveForm;
               <h6> About us</h6>
               <ul>
                 <li><a href="/"> Home </a></li>
-                <li><a href="#"> What We do </a></li>
-                <li><a href="#"> Testimonials </a></li>
-                <li><a href="#"> Faq </a></li>
+                <li><a href="/"> What We do </a></li>
+                <li><a href="/testimonials"> Testimonials </a></li>
+                <li><a href="/faq"> Faq </a></li>
                 <li><a href="/contactus"> Contact us</a></li>
               </ul>
             </div>
@@ -63,17 +63,7 @@ use yii\widgets\ActiveForm;
     <input type='hidden' name='slug-name' id='slug-id'>
   </div>
 </footer>
-<?php
-//$script = <<< JS
-//        
-//        $(document).ready(function () {
-//        
-//        
-//        
-//        });
-//JS;
-//$this->registerJs($script, View::POS_END);
-?>
+
 <?php
 $sendotp = Yii::$app->getUrlManager()->createUrl("site/site/ajaxbookotp");
 $requestquote = Yii::$app->getUrlManager()->createUrl("site/site/requestquote");

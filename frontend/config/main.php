@@ -126,6 +126,16 @@ return [
                     'route' => '/site/site/pages',
                     'defaults' => ['slug' =>'wallpapers'],
                    ],
+                 [
+                    'pattern' => '/testimonials/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'testimonials'],
+                   ],
+                 [
+                    'pattern' => '/faq/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'faq'],
+                   ],
             ],
 
          

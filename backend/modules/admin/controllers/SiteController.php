@@ -80,10 +80,9 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {  //changed login function
              $this->redirect(array('/admin/receipt/create'));
-        }     
-
+        }   
          return $this->render('login', [
                 'model' => $model,
             ]);

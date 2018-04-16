@@ -1523,3 +1523,105 @@ font-size:20px;
 {
 	background:#40aeef;
 }
+
+
+
+
+
+
+
+
+
+.faq-cont
+{
+	
+}
+
+.inner-left h2
+{
+	font-size:34px;
+	margin-bottom:20px;
+}
+
+
+.inner-right .contact-form-cont {
+	padding: 20px;
+}
+
+
+.cate-heading {
+	width: 100%;
+	float: left;
+	background: #0594d2;
+	color: #ffffff;
+	padding: 10px;
+	text-align: center;
+	font-size: 40px;
+text-transform: uppercase;
+font-weight:500;
+padding:15px 0px
+	
+}
+
+.cate-list
+{
+	width:100%;
+	float:left;
+	background:#eeeeee;
+}
+
+.cate-list ul li
+{
+	list-style:none;
+}
+
+
+.cate-list ul li a
+{
+	padding:15px 10px;
+	color:#333333;
+	display:block;
+	border:#dddddd solid 1px;
+	border-bottom:none;
+	border-left: #dddddd solid 3px;
+}
+
+.cate-list ul li:last-child a
+{
+		border-bottom:#dddddd solid 1px;
+}
+
+.cate-list ul li a:hover
+{
+	border-left: #68b716 solid 3px;
+	background:#ffffff;
+}
+
+
+.testimonials-txt
+{
+	width:100%;
+	float:left;
+	border:#eeeeee solid 1px;
+	padding:20px;
+	font-size:20px;
+	line-height:28px;
+	margin-bottom:30px;
+}
+
+.testimonials-txt i 
+{
+	margin-right:5px;
+	margin-left:5px;
+	color:#bbbbbb;
+}
+
+.testimonials-txt strong
+{
+	font-weight:600;
+}
+
+
+
+
+
