@@ -22,44 +22,29 @@ use yii\web\View;
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-         
-          <!-- Notifications: style can be found in dropdown.less -->
-         
-          <!-- Tasks: style can be found in dropdown.less -->
-      
-          <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/backend/web/themes/admin/img/avatar5.png" width="25" height="25" class="img-circle" alt="User Image">
-           
-              <span class="hidden-xs">Admin</span>
+              <!--<img src="/backend/web/themes/admin/img/avatar5.png" width="25" height="25" class="img-circle" alt="User Image">-->
+           <i class="glyphicon glyphicon-user"></i>
+              <span class="hidden-xs">Admin<i class="caret"></i></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
               <img src="/backend/web/themes/admin/img/avatar5.png" width="25" height="25" class="img-circle" alt="User Image">
-
                 <p>
-                 Admin 
+                    Admin <small>admin@gmail.com</small>
                 </p>
               </li>
-              <!-- Menu Body -->
               <li class="user-body">
-               
-                   
-                  
                     <div class="center-block">
-                        
+                        <center>
                       <?php echo Html::a('Edit Profile', ['/admin/site/profile'], $options = ['class' => 'btn btn-default btn-flat']); ?>                               
-
-                        
+                        </center>
                     </div>
-                
-                <!-- /.row -->
-              </li>
+                </li>
               <!-- Menu Footer-->
-              <li class="user-footer">
+              <li class="user-body">
                 <div class="pull-left">
                    <?php //echo Html::a('Profile', ['/admin/default/profile'], $options = ['class' => 'btn btn-default btn-flat']); ?>                               
                    <?php echo Html::a('Change password', ['/admin/site/changepassword'], $options = ['class' => 'btn btn-default btn-flat']); ?>
@@ -67,7 +52,6 @@ use yii\web\View;
                 </div>
                 <div class="pull-right">
                     <?= Html::a('Sign out', ['/admin/site/logout'], $options = ['class' => 'btn btn-default btn-flat']); ?>
-                  
                 </div>
               </li>
             </ul>
