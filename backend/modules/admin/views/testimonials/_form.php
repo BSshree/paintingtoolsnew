@@ -26,9 +26,9 @@ use yii\widgets\ActiveForm;
                     ?>
 
 
-    <?= $form->field($model, 'statement')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'statement')->textarea(['rows' => 6,'placeholder'=>'Statement']) ?>
 
-    <?= $form->field($model, 'name')->textInput() ?>
+    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Name']) ?>
 
   
  <div class="form-group">

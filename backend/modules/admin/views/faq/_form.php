@@ -29,9 +29,9 @@ use yii\widgets\ActiveForm;
                             ])
                     ?>
 
-    <?= $form->field($model, 'question')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'question')->textarea(['rows' => 6,'placeholder'=>'Question']) ?>
 
-    <?= $form->field($model, 'answer')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'answer')->textarea(['rows' => 6,'placeholder'=>'Answer']) ?>
 
        <div class="form-group">
          <div class="col-sm-0 col-sm-offset-2">
