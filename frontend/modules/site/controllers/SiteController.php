@@ -83,7 +83,6 @@ class SiteController extends Controller {
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
             $data = Yii::$app->request->post();
-            print_r($data); exit;
             $he1 = $data['he1'];
             $we1 = $data['we1'];
             $de1 = $data['de1'];
